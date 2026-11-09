@@ -10,11 +10,11 @@ android {
 
 	compileSdk 37
 	defaultConfig {
-		applicationId "org.joinmastodon.android"
+		applicationId "social.cupoftea.android"
 		minSdk 23
 		targetSdk 37
-		versionCode 194
-		versionName "2.13.5"
+		versionCode 1
+		versionName "1.0.0"
 		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 		testBuildType "screenshotsUiTest"
 	}

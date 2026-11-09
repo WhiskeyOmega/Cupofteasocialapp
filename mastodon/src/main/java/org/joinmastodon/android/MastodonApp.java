@@ -27,7 +27,7 @@ public class MastodonApp extends Application{
 		params.diskCacheSize=100*1024*1024;
 		params.maxMemoryCacheSize=Integer.MAX_VALUE;
 		ImageCache.setParams(params);
-		NetworkUtils.setUserAgent("MastodonAndroid/"+BuildConfig.VERSION_NAME);
+		NetworkUtils.setUserAgent("CupofteaAndroid/"+BuildConfig.VERSION_NAME);
 		UiUtils.updateLocalizedDateFormatters(context);
 
 		PushSubscriptionManager.tryRegisterFCM();

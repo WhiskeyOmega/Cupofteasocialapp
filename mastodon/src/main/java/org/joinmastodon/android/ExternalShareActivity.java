@@ -76,7 +76,7 @@ public class ExternalShareActivity extends FragmentStackActivity{
 			}
 		}else if(Intent.ACTION_VIEW.equals(intent.getAction()) && intent.getData()!=null){
 			Uri uri=intent.getData();
-			if(!"mastodon".equals(uri.getScheme()) || !"share".equals(uri.getHost())){
+			if(!"cupoftea".equals(uri.getScheme()) || !"share".equals(uri.getHost())){
 				Toast.makeText(this, "Unexpected intent URI: "+uri, Toast.LENGTH_SHORT).show();
 				finish();
 				return;

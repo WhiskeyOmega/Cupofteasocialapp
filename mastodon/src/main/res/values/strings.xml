@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-	<string name="app_name" translatable="false">Mastodon</string>
+	<string name="app_name" translatable="false">Cupoftea.social</string>
 
 	<string name="log_in">Log in</string>
 	<string name="next">Next</string>
@@ -182,11 +182,11 @@
 	<string name="settings_gif">Play animated avatars and emoji</string>
 	<string name="settings_custom_tabs">Open links in</string>
 	<string name="settings_notifications">Notifications</string>
-	<string name="settings_contribute">Contribute to Mastodon</string>
+	<string name="settings_contribute">Contribute to Cupoftea.social</string>
 	<string name="settings_tos">Terms of service</string>
 	<string name="settings_privacy_policy">Privacy policy</string>
 	<string name="settings_clear_cache">Clear media cache</string>
-	<string name="settings_app_version">Mastodon for Android v%1$s (%2$d)</string>
+	<string name="settings_app_version">Cupoftea.social for Android v%1$s (%2$d)</string>
 	<string name="media_cache_cleared">Media cache cleared</string>
 	<string name="confirm_log_out">Log out of %s?</string>
 	<string name="sensitive_content_explain">The author marked this media as sensitive.</string>
@@ -291,7 +291,7 @@
 	<string name="download_update">Download (%s)</string>
 	<string name="install_update">Install</string>
 	<string name="privacy_policy_title">Your privacy</string>
-	<string name="privacy_policy_subtitle">Although the Mastodon app does not collect any data, the server you sign up through may have a different policy.\n\nIf you disagree with the policy for %s, you can go back and pick a different server.</string>
+	<string name="privacy_policy_subtitle">Although the Cupoftea.social app does not collect any data, the server you sign up through may have a different policy.\n\nIf you disagree with the policy for %s, you can go back and pick a different server.</string>
 	<string name="i_agree">I agree</string>
 	<string name="empty_list">This list is empty</string>
 	<string name="instance_signup_closed">This server does not accept new registrations.</string>
@@ -343,7 +343,7 @@
 	<string name="pick_server">Pick another server</string>
 	<string name="signup_or_login">or</string>
 	<string name="learn_more">Learn more</string>
-	<string name="welcome_to_mastodon">Welcome to Mastodon</string>
+	<string name="welcome_to_mastodon">Welcome to Cupoftea.social</string>
 	<string name="welcome_paragraph1">Mastodon is a decentralized social network, meaning no single company controls it. It’s made up of many independently-run servers, all connected together.</string>
 	<string name="what_are_servers">What are servers?</string>
 	<string name="welcome_paragraph2">Every Mastodon account is hosted on a server — each with its own values, rules, &amp; admins. No matter which one you pick, you can follow and interact with people on any server.</string>
@@ -531,7 +531,7 @@
 	<string name="post_matches_filter_x">Matches filter “%s”</string>
 	<string name="search_mastodon">Search Mastodon</string>
 	<string name="clear_all">Clear all</string>
-	<string name="search_open_url">Open URL in Mastodon</string>
+	<string name="search_open_url">Open URL in Cupoftea.social</string>
 	<string name="posts_matching_hashtag">Posts with “%s”</string>
 	<string name="search_go_to_account">Go to %s</string>
 	<string name="posts_matching_string">Posts with “%s”</string>

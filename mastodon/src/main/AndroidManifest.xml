@@ -58,8 +58,7 @@
 				<action android:name="android.intent.action.VIEW"/>
 				<category android:name="android.intent.category.BROWSABLE"/>
 				<category android:name="android.intent.category.DEFAULT"/>
-				<data android:host="mastodon.social"/>
-				<data android:host="mastodon.online"/>
+				<data android:host="cupoftea.social"/>
 				<data android:scheme="https" />
 				<data android:pathPrefix="/@" />
 				<data android:pathPrefix="/collections/" />
@@ -88,7 +87,7 @@
 				<action android:name="android.intent.action.VIEW"/>
 				<category android:name="android.intent.category.BROWSABLE"/>
 				<category android:name="android.intent.category.DEFAULT"/>
-				<data android:scheme="mastodon" android:host="share"/>
+				<data android:scheme="cupoftea" android:host="share"/>
 			</intent-filter>
 		</activity>
 		<activity android:name=".DonationFragmentActivity" android:exported="false" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize"/>

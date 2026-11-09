@@ -1,8 +1,6 @@
 package org.joinmastodon.android.fragments;
 
 import android.app.ProgressDialog;
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,13 +16,9 @@ import org.joinmastodon.android.MastodonApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.MastodonErrorResponse;
 import org.joinmastodon.android.api.requests.accounts.CheckInviteLink;
-import org.joinmastodon.android.api.requests.catalog.GetCatalogDefaultInstances;
 import org.joinmastodon.android.api.session.AccountSessionManager;
-import org.joinmastodon.android.fragments.onboarding.InstanceCatalogSignupFragment;
-import org.joinmastodon.android.fragments.onboarding.InstanceChooserLoginFragment;
 import org.joinmastodon.android.fragments.onboarding.InstanceRulesFragment;
 import org.joinmastodon.android.model.Instance;
-import org.joinmastodon.android.model.catalog.CatalogDefaultInstance;
 import org.joinmastodon.android.ui.InterpolatingMotionEffect;
 import org.joinmastodon.android.ui.M3AlertDialogBuilder;
 import org.joinmastodon.android.ui.text.HtmlParser;
@@ -33,9 +27,6 @@ import org.joinmastodon.android.ui.views.ProgressBarButton;
 import org.joinmastodon.android.ui.views.SizeListenerFrameLayout;
 import org.parceler.Parcels;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.ThreadLocalRandom;
 
 import androidx.annotation.Nullable;
 import me.grishka.appkit.Nav;
@@ -72,8 +63,7 @@ public class SplashFragment extends AppKitFragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
 		contentView=(SizeListenerFrameLayout) inflater.inflate(R.layout.fragment_splash, container, false);
-		contentView.findViewById(R.id.btn_get_started).setOnClickListener(this::onButtonClick);
-		contentView.findViewById(R.id.btn_log_in).setOnClickListener(this::onButtonClick);
+		contentView.findViewById(R.id.btn_log_in).setOnClickListener(this::onLogInClick);
 		defaultServerButton=contentView.findViewById(R.id.btn_join_default_server);
 		defaultServerButton.setText(getString(R.string.join_default_server, chosenDefaultServer));
 		defaultServerButton.setOnClickListener(this::onJoinDefaultServerClick);
@@ -113,18 +103,36 @@ public class SplashFragment extends AppKitFragment{
 				});
 			}
 		});
-		if(!loadedDefaultServer && !loadingDefaultServer)
-			loadAndChooseDefaultServer();
 
 		return contentView;
 	}
 
-	private void onButtonClick(View v){
-		Bundle extras=new Bundle();
-		boolean isSignup=v.getId()==R.id.btn_get_started;
-		extras.putBoolean("signup", isSignup);
-		extras.putString("defaultServer", chosenDefaultServer);
-		Nav.go(getActivity(), isSignup ? InstanceCatalogSignupFragment.class : InstanceChooserLoginFragment.class, extras);
+	private void onLogInClick(View v){
+		instanceLoadingProgress=new ProgressDialog(getActivity());
+		instanceLoadingProgress.setCancelable(false);
+		instanceLoadingProgress.setMessage(getString(R.string.loading_instance));
+		instanceLoadingProgress.show();
+		AccountSessionManager.loadInstanceInfo(DEFAULT_SERVER, new Callback<>(){
+			@Override
+			public void onSuccess(Instance result){
+				if(getActivity()==null)
+					return;
+				if(instanceLoadingProgress!=null)
+					instanceLoadingProgress.dismiss();
+				instanceLoadingProgress=null;
+				AccountSessionManager.getInstance().authenticate(getActivity(), result);
+			}
+
+			@Override
+			public void onError(ErrorResponse error){
+				if(getActivity()==null)
+					return;
+				if(instanceLoadingProgress!=null)
+					instanceLoadingProgress.dismiss();
+				instanceLoadingProgress=null;
+				error.showToast(getActivity());
+			}
+		});
 	}
 
 	private void onJoinDefaultServerClick(View v){
@@ -258,57 +266,6 @@ public class SplashFragment extends AppKitFragment{
 	protected void onHidden(){
 		super.onHidden();
 		motionEffect.deactivate();
-	}
-
-	private void loadAndChooseDefaultServer(){
-		ClipData clipData=getActivity().getSystemService(ClipboardManager.class).getPrimaryClip();
-		if(clipData!=null && clipData.getItemCount()>0){
-			String clipText=clipData.getItemAt(0).coerceToText(getActivity()).toString();
-			if(HtmlParser.isValidInviteUrl(clipText)){
-				currentInviteLink=Uri.parse(clipText);
-				defaultServerButton.setText(getString(R.string.join_server_x_with_invite, HtmlParser.normalizeDomain(Objects.requireNonNull(currentInviteLink.getHost()))));
-			}
-		}else{
-			loadingDefaultServer=true;
-			defaultServerButton.setTextVisible(false);
-			defaultServerProgress.setVisibility(View.VISIBLE);
-		}
-		new GetCatalogDefaultInstances()
-				.setCallback(new Callback<>(){
-					@Override
-					public void onSuccess(List<CatalogDefaultInstance> result){
-						if(result.isEmpty()){
-							setChosenDefaultServer(DEFAULT_SERVER);
-							return;
-						}
-						float sum=0f;
-						for(CatalogDefaultInstance inst:result){
-							sum+=inst.weight;
-						}
-						if(sum<=0)
-							sum=1f;
-						for(CatalogDefaultInstance inst:result){
-							inst.weight/=sum;
-						}
-						float rand=ThreadLocalRandom.current().nextFloat();
-						float prev=0f;
-						for(CatalogDefaultInstance inst:result){
-							if(rand>=prev && rand<prev+inst.weight){
-								setChosenDefaultServer(inst.domain);
-								return;
-							}
-							prev+=inst.weight;
-						}
-						// Just in case something didn't add up
-						setChosenDefaultServer(result.get(result.size()-1).domain);
-					}
-
-					@Override
-					public void onError(ErrorResponse error){
-						setChosenDefaultServer(DEFAULT_SERVER);
-					}
-				})
-				.execNoAuth("");
 	}
 
 	private void setChosenDefaultServer(String domain){

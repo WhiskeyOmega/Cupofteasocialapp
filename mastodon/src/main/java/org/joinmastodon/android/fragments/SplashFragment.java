@@ -1,15 +1,22 @@
 package org.joinmastodon.android.fragments;
 
+import android.animation.Animator;
+import android.animation.Keyframe;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
+import android.animation.ValueAnimator;
 import android.app.ProgressDialog;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowInsets;
+import android.view.animation.LinearInterpolator;
 import android.widget.ProgressBar;
 
 import org.joinmastodon.android.MastodonApp;
@@ -26,6 +33,8 @@ import org.joinmastodon.android.ui.utils.UiUtils;
 import org.joinmastodon.android.ui.views.ProgressBarButton;
 import org.joinmastodon.android.ui.views.SizeListenerFrameLayout;
 import org.parceler.Parcels;
+
+import java.util.ArrayList;
 
 
 import androidx.annotation.Nullable;
@@ -51,6 +60,8 @@ public class SplashFragment extends AppKitFragment{
 	private Uri currentInviteLink;
 	private ProgressDialog instanceLoadingProgress;
 	private String inviteCode;
+	private View steamLeft, steamRight;
+	private final ArrayList<Animator> steamAnimators=new ArrayList<>();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -89,6 +100,10 @@ public class SplashFragment extends AppKitFragment{
 		motionEffect.addViewEffect(new InterpolatingMotionEffect.ViewEffect(artCenterHill, V.dp(-14), V.dp(14), V.dp(-5), V.dp(25)));
 		motionEffect.addViewEffect(new InterpolatingMotionEffect.ViewEffect(artPlaneElephant, V.dp(-20), V.dp(12), V.dp(-20), V.dp(12)));
 		artContainer.setOnTouchListener(motionEffect);
+
+		stopSteam();
+		steamLeft=contentView.findViewById(R.id.mascot_steam_left);
+		steamRight=contentView.findViewById(R.id.mascot_steam_right);
 
 		contentView.setSizeListener(new SizeListenerFrameLayout.OnSizeChangedListener(){
 			@Override
@@ -260,12 +275,62 @@ public class SplashFragment extends AppKitFragment{
 	protected void onShown(){
 		super.onShown();
 		motionEffect.activate();
+		startSteam();
 	}
 
 	@Override
 	protected void onHidden(){
 		super.onHidden();
 		motionEffect.deactivate();
+		stopSteam();
+	}
+
+	private void startSteam(){
+		stopSteam();
+		if(steamLeft==null || steamRight==null)
+			return;
+		// Respect "remove animations" / animator duration scale 0: leave the steam static
+		if(Settings.Global.getFloat(MastodonApp.context.getContentResolver(), Settings.Global.ANIMATOR_DURATION_SCALE, 1f)==0f)
+			return;
+		steamLeft.setAlpha(0f);
+		steamRight.setAlpha(0f);
+		steamAnimators.add(makeSteamAnimator(steamLeft, 2800, 0, 6f, 1.2f));
+		steamAnimators.add(makeSteamAnimator(steamRight, 3300, 900, 5f, -1.0f));
+		for(Animator a:steamAnimators)
+			a.start();
+	}
+
+	private void stopSteam(){
+		for(Animator a:steamAnimators)
+			a.cancel();
+		steamAnimators.clear();
+		for(View v:new View[]{steamLeft, steamRight}){
+			if(v!=null){
+				v.setAlpha(1f);
+				v.setTranslationX(0f);
+				v.setTranslationY(0f);
+			}
+		}
+	}
+
+	private ObjectAnimator makeSteamAnimator(View v, long duration, long delay, float riseDp, float swayDp){
+		ObjectAnimator a=ObjectAnimator.ofPropertyValuesHolder(v,
+				PropertyValuesHolder.ofFloat(View.TRANSLATION_Y, 0f, -V.dp(riseDp)),
+				PropertyValuesHolder.ofKeyframe(View.TRANSLATION_X,
+						Keyframe.ofFloat(0f, 0f),
+						Keyframe.ofFloat(0.35f, V.dp(swayDp)),
+						Keyframe.ofFloat(0.7f, -V.dp(swayDp)*0.6f),
+						Keyframe.ofFloat(1f, V.dp(swayDp)*0.4f)),
+				PropertyValuesHolder.ofKeyframe(View.ALPHA,
+						Keyframe.ofFloat(0f, 0f),
+						Keyframe.ofFloat(0.2f, 0.95f),
+						Keyframe.ofFloat(0.65f, 0.8f),
+						Keyframe.ofFloat(1f, 0f)));
+		a.setDuration(duration);
+		a.setStartDelay(delay);
+		a.setRepeatCount(ValueAnimator.INFINITE);
+		a.setInterpolator(new LinearInterpolator());
+		return a;
 	}
 
 	private void setChosenDefaultServer(String domain){

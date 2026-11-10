@@ -71,7 +71,8 @@ public class SettingsMainFragment extends BaseSettingsFragment<Object>{
 
 				new SectionHeaderListItem(R.string.settings_app_settings),
 				new ListItem<>(R.string.settings_behavior, 0, R.drawable.ic_tune_24px, this::onBehaviorClick),
-				new ListItem<>(R.string.settings_display, 0, R.drawable.ic_style_24px, this::onDisplayClick)
+				new ListItem<>(R.string.settings_display, 0, R.drawable.ic_style_24px, this::onDisplayClick),
+				new ListItem<>(R.string.settings_donate_cupoftea, 0, R.drawable.ic_settings_heart_24px, this::onDonateClick)
 
 		));
 		if(AccountSessionManager.get(accountID).isEligibleForDonations()){
@@ -152,6 +153,10 @@ public class SettingsMainFragment extends BaseSettingsFragment<Object>{
 
 	private void onDisplayClick(ListItem<?> item_){
 		Nav.go(getActivity(), SettingsDisplayFragment.class, makeFragmentArgs());
+	}
+
+	private void onDonateClick(ListItem<?> item_){
+		UiUtils.launchWebBrowser(getActivity(), getString(R.string.donate_url));
 	}
 
 	private void onAboutClick(ListItem<?> item_){

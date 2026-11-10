@@ -39,7 +39,6 @@ public class SettingsAboutAppFragment extends BaseSettingsFragment<Void>{
 		AccountSession s=AccountSessionManager.get(accountID);
 		onDataLoaded(List.of(
 				new ListItem<>(R.string.settings_even_more, 0, i->UiUtils.launchWebBrowser(getActivity(), "https://"+s.domain+"/auth/edit")),
-				new ListItem<>(R.string.settings_contribute, 0, i->UiUtils.launchWebBrowser(getActivity(), getString(R.string.github_url))),
 				new ListItem<>(R.string.settings_tos, 0, i->UiUtils.launchWebBrowser(getActivity(), "https://"+s.domain+"/terms")),
 				new ListItem<>(R.string.settings_privacy_policy, 0, i->UiUtils.launchWebBrowser(getActivity(), getString(R.string.privacy_policy_url)), 0, true),
 				mediaCacheItem=new ListItem<>(R.string.settings_clear_cache, 0, this::onClearMediaCacheClick)
@@ -62,7 +61,7 @@ public class SettingsAboutAppFragment extends BaseSettingsFragment<Void>{
 		versionInfo.setTextAppearance(R.style.m3_label_medium);
 		versionInfo.setTextColor(UiUtils.getThemeColor(getActivity(), R.attr.colorM3Outline));
 		versionInfo.setGravity(Gravity.CENTER);
-		versionInfo.setText(getString(R.string.settings_app_version, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE));
+		versionInfo.setText(getString(R.string.app_name)+" v"+BuildConfig.VERSION_NAME+" ("+BuildConfig.VERSION_CODE+")");
 		versionInfo.setOnClickListener(v->{
 			getActivity().getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("", BuildConfig.VERSION_NAME+" ("+BuildConfig.VERSION_CODE+")"));
 			if(Build.VERSION.SDK_INT<=Build.VERSION_CODES.S_V2){

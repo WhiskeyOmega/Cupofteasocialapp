@@ -2,4 +2,5 @@
 <resources>
 	<string name="github_url" translatable="false">https://github.com/WhiskeyOmega/Cupofteasocialapp</string>
 	<string name="privacy_policy_url" translatable="false">https://cupoftea.social/privacy-policy</string>
+	<string name="donate_url" translatable="false">https://ko-fi.com/cupofteasocial</string>
 </resources>

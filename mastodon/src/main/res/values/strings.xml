@@ -740,6 +740,7 @@
 	<string name="donation_success_subtitle">You should receive an email confirming your donation soon.</string>
 	<string name="donation_server_error">We are sorry, an error occurred and we have not been able to process your donation.\n\nPlease retry in a few minutes.</string>
 	<string name="settings_donate">Donate to Mastodon</string>
+	<string name="settings_donate_cupoftea" translatable="false">Donate to Cupoftea.social</string>
 	<string name="settings_manage_donations">Manage donations</string>
 	<string name="cant_load_image">Couldn’t load image</string>
 	<string name="poll_see_results">See results</string>

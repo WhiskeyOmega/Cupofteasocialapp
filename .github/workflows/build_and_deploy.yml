@@ -64,8 +64,8 @@ jobs:
       - name: Upload release apk
         uses: actions/upload-artifact@v4
         with:
-          name: mastodon-release.apk
-          path: mastodon/build/outputs/apk/release/mastodon-release.apk
+          name: Cupoftea.social-release.apk
+          path: mastodon/build/outputs/apk/release/Cupoftea.social-release.apk
 
       - name: Build githubRelease apk
         run: ./gradlew assembleGithubRelease
@@ -76,8 +76,8 @@ jobs:
       - name: Upload githubRelease apk
         uses: actions/upload-artifact@v4
         with:
-          name: mastodon-githubRelease.apk
-          path: mastodon/build/outputs/apk/githubRelease/mastodon-githubRelease.apk
+          name: Cupoftea.social-githubRelease.apk
+          path: mastodon/build/outputs/apk/githubRelease/Cupoftea.social-githubRelease.apk
 
       - name: Upload mappings
         uses: actions/upload-artifact@v4

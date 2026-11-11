@@ -3,6 +3,11 @@ plugins {
 	id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
+// Name of the built APK/AAB files, e.g. Cupoftea.social-githubRelease.apk (use 'COTS' for a shorter name)
+base {
+	archivesName = 'Cupoftea.social'
+}
+
 android {
 	androidResources {
 		generateLocaleConfig = true

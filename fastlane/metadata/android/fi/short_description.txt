@@ -1,1 +1,1 @@
-Keskustelut tapahtuvat täällä
+Tämä on sovellus Cupoftea.socialin Mastodon-yhteisölle

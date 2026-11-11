@@ -1,1 +1,1 @@
-Konuşmaların gerçekleştiği yer
+Bu, Cupoftea.social Mastodon Topluluğu için bir uygulamadır

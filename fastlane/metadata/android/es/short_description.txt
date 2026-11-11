@@ -1,1 +1,1 @@
-Donde las conversaciones ocurren
+Esta es una aplicación para la comunidad Mastodon de Cupoftea.social

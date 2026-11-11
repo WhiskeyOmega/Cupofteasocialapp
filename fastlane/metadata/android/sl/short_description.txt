@@ -1,1 +1,1 @@
-Kjer potekajo pogovori
+To je aplikacija za skupnost Mastodon na Cupoftea.social

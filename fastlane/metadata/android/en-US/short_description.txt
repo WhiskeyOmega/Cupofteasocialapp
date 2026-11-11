@@ -1,1 +1,1 @@
-Android app for the Cupoftea.social community
+This is an app for the Mastodon Community of Cupoftea.social

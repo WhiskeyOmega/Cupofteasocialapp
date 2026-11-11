@@ -1,1 +1,1 @@
-Tam, kde vznikají konverzace
+Toto je aplikace pro komunitu Mastodon na Cupoftea.social

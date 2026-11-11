@@ -1,1 +1,1 @@
-Hvor samtaler finder sted
+Dette er en app til Mastodon-fællesskabet på Cupoftea.social

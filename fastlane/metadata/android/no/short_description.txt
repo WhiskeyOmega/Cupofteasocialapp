@@ -1,1 +1,1 @@
-Where conversations happen
+Dette er en app for Mastodon-fellesskapet til Cupoftea.social

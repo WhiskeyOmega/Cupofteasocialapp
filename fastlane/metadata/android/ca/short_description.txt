@@ -1,1 +1,1 @@
-Where conversations happen
+Aquesta és una aplicació per a la comunitat Mastodon de Cupoftea.social

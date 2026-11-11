@@ -1,31 +1,33 @@
-Cupoftea.social is a friendly corner of the fediverse, and this is its Android app. Log in to your Cupoftea.social account and keep up with people across the fediverse in a chronological timeline. No algorithms, ads, or clickbait.
+First Launched in 2022. This is the app for the Mastodon Community of Cupoftea.social. A wholesome & positive social network that puts the human being back in social networks. Described as a breath of fresh air by some.
 
-In the app you can:
+Cupoftea.social is an instance of Mastodon, this app is a reskin of the Mastodon App with customized features specifically designed for it.
 
-READ AND EXPLORE
+Cupoftea.social is not affiliated with Mastodon GmbH
 
-■ Keep up with the people you care about in a chronological feed
-■ Follow hashtags to keep up with specific topics
-■ Discover new people and see what is happening
+EXPLORE
 
-POST
+■ Discover new writers, journalists, artists, photographers, scientists, and more
+■ See what’s happening in the world
 
-■ Post to your followers or the whole world, with polls, images and videos
-■ Put posts behind content warnings
-■ Take part in conversations with other people
+READ
+
+■ Keep up with people you care about in a chronological feed with no interruptions
+■ Follow hashtags to keep up with specific topics in real time
+
+CREATE
+
+■ Post to your followers or the whole world, with polls, and high quality images and videos
+■ Participate in interesting conversations with other people
 
 CURATE
 
-■ Create lists of people so you never miss a post
-■ Filter words or phrases to control what you see
+■ Create lists of people to never miss a post
+■ Filter words or phrases to control what you do and don’t want to see
+
+AND MORE!
+
+■ A beautiful theme that adapts to your personalised colour scheme, light or dark
+■ Share and scan QR codes to quickly exchange Cupoftea.social & Mastodon profiles with others
+■ Login and switch between multiple accounts
 ■ Get notified when a specific person posts with the bell button
-
-AND MORE
-
-■ A theme that adapts to your colour scheme, light or dark
-■ Share and scan QR codes to quickly exchange profiles
-■ Log in and switch between multiple accounts
-
-Cupoftea.social is part of the fediverse, so you can follow and talk to people on other servers too, using the same account.
-
-This is an independent app for Cupoftea.social, based on the open-source Mastodon app for Android and released under the GNU General Public License v3. It is not affiliated with Mastodon gGmbH. Mastodon is a registered trademark of Mastodon gGmbH.
+■ No spoilers! You can put your posts behind content warnings

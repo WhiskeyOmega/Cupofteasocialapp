@@ -1,1 +1,1 @@
-Atje ku zhvillohen bisedime
+Ky është një aplikacion për komunitetin Mastodon të Cupoftea.social

@@ -49,7 +49,7 @@
 						android:singleLine="true"
 						android:textColor="?colorM3OnSurfaceVariant"
 						android:textAppearance="@style/m3_body_large"
-						android:text="@string/search_mastodon"/>
+						android:text="@string/search_hint"/>
 
 					<ImageButton
 						android:id="@+id/search_scan_qr"

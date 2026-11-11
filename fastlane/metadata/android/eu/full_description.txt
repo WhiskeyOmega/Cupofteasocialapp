@@ -1,6 +1,8 @@
-Mastodon gertatzen ari denari buruz egunean egoteko modurik onena da. Jarraitu edonor fedibertsoan eta ikusi dena ordena kronologikoan. Ez dago algoritmorik, iragarkirik edo clickbait-ik bistan.
+2022an abiarazi zen lehen aldiz. Hau Cupoftea.social-en Mastodon komunitatearen aplikazioa da. Gizakia sare sozialetara itzultzen duen sare sozial osasuntsu eta positiboa. Batzuek aire freskoaren arnasa bezala deskribatu dute.
 
-Hau Android gailuentzako Mastodon aplikazio ofiziala da. Ikaragarri azkarra eta ikaragarri ederra da, ahaltsua ez ezik, erabilerraza ere izateko diseinatua. Gure aplikazioan, hauek egin ditzakezu:
+Cupoftea.social Mastodon-en instantzia bat da; aplikazio hau Mastodon aplikazioaren azala aldatutako bertsio bat da, bereziki horretarako diseinatutako funtzio pertsonalizatuekin.
+
+Cupoftea.social ez dago Mastodon GmbH-rekin lotuta
 
 ESPLORATU
 
@@ -25,37 +27,7 @@ ONDU
 ETA GEHIAGO!
 
 ■ Zure kolore eskema pertsonalizatura egokitzen den gai ederra, argia edo iluna
-■ Partekatu eta eskaneatu QR kodeak Mastodon profilak beste batzuekin azkar trukatzeko
+■ Partekatu eta eskaneatu QR kodeak Cupoftea.social & Mastodon profilak beste batzuekin azkar trukatzeko
 ■ Saioa hasi eta aldatu hainbat konturen artean
 ■ Jakinarazpenak jaso pertsona jakin batek argitaratzen duenean kanpaiaren botoiarekin
 ■ Izorrakirik ez! Zure mezuak eduki abisuekin babes ditzakezu
-
-ARGITARATZEKO PLATAFORMA INDARTSUA
-
-Jada ez duzu algoritmo opako bat baretzen saiatu behar, zure lagunek argitaratu zenuena ikusiko duten ala ez erabakitzen duena. Jarraitzen badizute, ikusiko dute.
-
-Web irekian argitaratzen baduzu, web irekian eskuragarri dago. Mastodonerako loturak segurtasunez parteka ditzakezu, jakinda edozeinek irakurri ahal izango dituela saioa hasi gabe.
-
-Harien, inkesten, irudien, bideoen, audioaren eta edukien ohartarazpenen artean, Mastodonek modu asko eskaintzen ditu komeni zaizun moduan adierazteko.
-
-IRAKURTZEKO PLATAFORMA INDARTSUA
-
-Ez dizugu iragarkirik erakutsi behar; beraz, ez dizugu eutsi behar gure aplikazioan. Mastodonek hirugarrenen aplikazio eta integrazioen aukeraketa aberatsena du, gehien komeni zaizun esperientzia aukera dezazun. 
-
-Orri nagusiko jario kronologikoari esker, erraza da jakitea noiz aurkitu dituzun eguneraketa guztiak eta beste gauza batera pasa zaitezke.
-
-Ez dago kezkatu beharrik okerreko klik batek betiko zure gomendioak hondatuko dituela. Ez dugu asmatzen zer ikusi nahi duzun, zuk kontrola dezazun uzten dugu.
-
-PROTOKOLOAK, PLATAFORMARIK EZ
-
-Mastodon ez da sare sozialen ohiko plataforma bat, protokolo deszentralizatu batean oinarritzen da. Gure zerbitzari ofizialean izena eman dezakezu edo hirugarren bat aukeratu zure datuak ostatatzeko eta zure esperientzia moderatzeko.
-
-Protokolo komunari esker, ez du axola zer aukeratzen duzun, arazorik gabe komunika zaitezke jendearekin beste Mastodon zerbitzari batzuetan badaude ere. Are gehiago: kontu bakar batekin, fedibertsoko beste plataforma batzuetako jendearekin komunika zaitezke.
-
-Ez al zaude pozik zure aukerarekin? Beti alda dezakezu Mastodon zerbitzari desberdin batera zure jarraitzaileak zurekin eramaten dituzun bitartean. Erabiltzaile aurreratuentzat, zure datuak zure azpiegituran bertan ostatatu ditzakezu, Mastodon software librea baita.
-
-IRABAZI ASMORIK GABE IZAERAZ
-
-Mastodon Estatu Batuetan eta Alemanian erregistratutako irabazi-asmorik gabeko erakundea da. Ez gaude motibatuta plataformaren diru-balioa ateratzeagatik, baizik eta plataformarentzat hobea denagatik.
-
-HEMEN AGERTZEN DEN BEZALA: TIME, Forbes, Wired, The Guardian, CNN, The Verge, TechCrunch, Financial Times, Gizmodo PCMAG.com, eta gehiago.

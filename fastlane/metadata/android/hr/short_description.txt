@@ -1,1 +1,1 @@
-Where conversations happen
+Ovo je aplikacija za Mastodon zajednicu Cupoftea.social

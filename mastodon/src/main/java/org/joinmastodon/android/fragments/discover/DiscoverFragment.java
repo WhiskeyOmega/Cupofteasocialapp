@@ -280,7 +280,7 @@ public class DiscoverFragment extends AppKitFragment implements ScrollableToTop{
 		tabLayout.setVisibility(View.VISIBLE);
 		searchTabLayout.setVisibility(View.GONE);
 		searchView.setVisibility(View.GONE);
-		searchText.setText(R.string.search_mastodon);
+		searchText.setText(R.string.search_hint);
 		searchBack.setImageResource(R.drawable.ic_search_24px);
 		searchBack.setEnabled(false);
 		searchBack.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);

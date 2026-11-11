@@ -111,3 +111,4 @@ dependencies {
 
 	testImplementation 'junit:junit:4.13.2'
 }
+apply from: 'ci_signing.gradle'

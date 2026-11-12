@@ -1,0 +1,4 @@
+• Fixed theme colours
+• Posts you favourite, boost or bookmark now update everywhere they appear, including polls
+• The home timeline keeps your scroll position more reliably
+• Updated translations

@@ -22,7 +22,7 @@
 				android:layout_marginBottom="-10dp"
 				android:indeterminate="true"
 				android:background="?colorM3SurfaceVariant"
-				android:theme="@style/Theme.Mastodon.Toolbar.ProgressBar"
+				android:theme="@style/Theme.Cupoftea.Toolbar.ProgressBar"
 				style="@android:style/Widget.Material.ProgressBar.Horizontal"/>
 		</FrameLayout>
 	</FrameLayout>

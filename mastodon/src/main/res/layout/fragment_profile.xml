@@ -342,7 +342,7 @@
 				android:layout_marginHorizontal="16dp"
 				android:layout_marginTop="-4dp"
 				android:layout_marginBottom="8dp"
-				style="@style/Widget.Mastodon.M3.Button.Outlined.Neutral"
+				style="@style/Widget.Cupoftea.M3.Button.Outlined.Neutral"
 				android:text="@string/profile_show_all_fields"/>
 
 			<LinearLayout
@@ -365,7 +365,7 @@
 						android:id="@+id/profile_action_btn"
 						android:layout_width="match_parent"
 						android:layout_height="40dp"
-						style="@style/Widget.Mastodon.M3.Button.Filled"
+						style="@style/Widget.Cupoftea.M3.Button.Filled"
 						android:minWidth="156dp"
 						android:paddingHorizontal="16dp"
 						tools:text="@string/save_changes" />
@@ -387,7 +387,7 @@
 					android:layout_width="40dp"
 					android:layout_height="40dp"
 					android:layout_gravity="center_vertical"
-					style="@style/Widget.Mastodon.M3.Button.Outlined.Neutral"
+					style="@style/Widget.Cupoftea.M3.Button.Outlined.Neutral"
 					android:tint="?colorM3OnSurfaceVariant"
 					android:layout_marginStart="8dp"
 					android:scaleType="centerCrop"
@@ -400,7 +400,7 @@
 					android:layout_width="40dp"
 					android:layout_height="40dp"
 					android:layout_gravity="center_vertical"
-					style="@style/Widget.Mastodon.M3.Button.Outlined.Neutral"
+					style="@style/Widget.Cupoftea.M3.Button.Outlined.Neutral"
 					android:tint="?colorM3OnSurfaceVariant"
 					android:layout_marginStart="8dp"
 					android:layout_marginEnd="4dp"

@@ -30,7 +30,7 @@ import android.widget.Toast;
 import android.window.OnBackInvokedDispatcher;
 
 import org.joinmastodon.android.GlobalUserPreferences;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.MastodonAPIController;
 import org.joinmastodon.android.ui.utils.UiUtils;

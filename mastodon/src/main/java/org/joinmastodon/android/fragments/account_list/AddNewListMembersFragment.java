@@ -130,10 +130,10 @@ public class AddNewListMembersFragment extends AccountSearchFragment{
 		int textRes, styleRes;
 		if(accountIDsInList.contains(holder.getItem().account.id)){
 			textRes=R.string.remove;
-			styleRes=R.style.Widget_Mastodon_M3_Button_Tonal_Error;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Tonal_Error;
 		}else{
 			textRes=R.string.add;
-			styleRes=R.style.Widget_Mastodon_M3_Button_Filled;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Filled;
 		}
 		button.setText(textRes);
 		TypedArray ta=button.getContext().obtainStyledAttributes(styleRes, new int[]{android.R.attr.background});

@@ -319,10 +319,10 @@ public class CollectionFragment extends BaseAccountListFragment{
 			if(AccountSessionManager.getInstance().isSelf(accountID, item.account)){
 				button.setVisibility(View.VISIBLE);
 				button.setText(R.string.remove_self_from_collection);
-				TypedArray ta=button.getContext().obtainStyledAttributes(R.style.Widget_Mastodon_M3_Button_Tonal, new int[]{android.R.attr.background});
+				TypedArray ta=button.getContext().obtainStyledAttributes(R.style.Widget_Cupoftea_M3_Button_Tonal, new int[]{android.R.attr.background});
 				button.setBackground(ta.getDrawable(0));
 				ta.recycle();
-				ta=button.getContext().obtainStyledAttributes(R.style.Widget_Mastodon_M3_Button_Tonal, new int[]{android.R.attr.textColor});
+				ta=button.getContext().obtainStyledAttributes(R.style.Widget_Cupoftea_M3_Button_Tonal, new int[]{android.R.attr.textColor});
 				button.setTextColor(ta.getColorStateList(0));
 				ta.recycle();
 			}else{

@@ -30,7 +30,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.MastodonAPIController;
 import org.joinmastodon.android.api.ProgressListener;
@@ -133,7 +133,7 @@ public class ComposeMediaViewController{
 		}
 		String type=fragment.getActivity().getContentResolver().getType(uri);
 		int size;
-		try(Cursor cursor=MastodonApp.context.getContentResolver().query(uri, new String[]{OpenableColumns.SIZE}, null, null, null)){
+		try(Cursor cursor=CupofteaApp.context.getContentResolver().query(uri, new String[]{OpenableColumns.SIZE}, null, null, null)){
 			cursor.moveToFirst();
 			size=cursor.getInt(0);
 		}catch(Exception x){

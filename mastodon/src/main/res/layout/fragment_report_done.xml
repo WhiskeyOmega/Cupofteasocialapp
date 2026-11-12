@@ -111,7 +111,7 @@
 					android:focusable="false"
 					tools:text="@string/unfollow_user"
 					android:duplicateParentState="true"
-					style="@style/Widget.Mastodon.M3.Button.Outlined"/>
+					style="@style/Widget.Cupoftea.M3.Button.Outlined"/>
 			</FrameLayout>
 
 			<TextView
@@ -142,7 +142,7 @@
 					android:focusable="false"
 					tools:text="@string/block_user"
 					android:duplicateParentState="true"
-					style="@style/Widget.Mastodon.M3.Button.Outlined"/>
+					style="@style/Widget.Cupoftea.M3.Button.Outlined"/>
 			</FrameLayout>
 
 			<TextView
@@ -173,7 +173,7 @@
 					android:focusable="false"
 					tools:text="@string/mute_user"
 					android:duplicateParentState="true"
-					style="@style/Widget.Mastodon.M3.Button.Outlined"/>
+					style="@style/Widget.Cupoftea.M3.Button.Outlined"/>
 			</FrameLayout>
 
 			<TextView

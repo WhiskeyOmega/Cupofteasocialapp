@@ -111,4 +111,8 @@ dependencies {
 
 	testImplementation 'junit:junit:4.13.2'
 }
-apply from: 'ci_signing.gradle'
+// Sign release builds only when a keystore is supplied through the KEYSTORE_FILE / KEYSTORE_PASSWORD
+// environment variables. Without them (F-Droid, other contributors) the build simply stays unsigned.
+if(System.getenv("KEYSTORE_FILE")){
+	apply from: 'ci_signing.gradle'
+}

@@ -12,13 +12,13 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		style="@style/Widget.Mastodon.M3.Button.Outlined.Neutral">
+		style="@style/Widget.Cupoftea.M3.Button.Outlined.Neutral">
 
 		<TextView
 			android:id="@+id/text"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
-			style="@style/Widget.Mastodon.M3.Button.Outlined.Neutral"
+			style="@style/Widget.Cupoftea.M3.Button.Outlined.Neutral"
 			android:background="@null"
 			android:foreground="@null"
 			android:padding="0dp"

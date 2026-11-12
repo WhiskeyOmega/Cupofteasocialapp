@@ -67,7 +67,7 @@
 			android:layout_below="@id/self_banner_description"
 			android:layout_toEndOf="@id/self_banner_icon"
 			android:layout_marginTop="8dp"
-			style="@style/Widget.Mastodon.M3.Button.Tonal"
+			style="@style/Widget.Cupoftea.M3.Button.Tonal"
 			android:text="@string/remove_self_from_collection"/>
 
 	</RelativeLayout>

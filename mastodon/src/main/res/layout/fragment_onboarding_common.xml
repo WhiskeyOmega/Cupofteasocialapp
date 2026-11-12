@@ -132,7 +132,7 @@
 			android:layout_marginLeft="16dp"
 			android:layout_marginRight="16dp"
 			android:layout_marginTop="8dp"
-			style="@style/Widget.Mastodon.M3.Button.Text"
+			style="@style/Widget.Cupoftea.M3.Button.Text"
 			android:text="@string/use_invite_link"/>
 
 		<Button
@@ -144,7 +144,7 @@
 			android:layout_marginTop="8dp"
 			android:layout_marginBottom="16dp"
 			android:minWidth="145dp"
-			style="@style/Widget.Mastodon.M3.Button.Filled"
+			style="@style/Widget.Cupoftea.M3.Button.Filled"
 			android:text="@string/next" />
 
 	</LinearLayout>

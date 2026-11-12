@@ -74,7 +74,7 @@ public class ProfileEditFeaturedHashtagsFragment extends BaseSettingsFragment<Ha
 		MergeRecyclerAdapter adapter=new MergeRecyclerAdapter();
 		adapter.addAdapter(super.getAdapter());
 
-		Button addButton=new Button(getActivity(), null, 0, R.style.Widget_Mastodon_M3_Button_Tonal);
+		Button addButton=new Button(getActivity(), null, 0, R.style.Widget_Cupoftea_M3_Button_Tonal);
 		addButton.setText(R.string.add_featured_hashtag);
 		FrameLayout buttonWrap=new FrameLayout(getActivity());
 		buttonWrap.addView(addButton, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.START));

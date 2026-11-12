@@ -6,7 +6,7 @@
 	android:layout_height="match_parent"
 	android:fitsSystemWindows="true"
 	android:clipToPadding="false"
-	android:theme="@style/Theme.Mastodon.Dark.SplashFragment">
+	android:theme="@style/Theme.Cupoftea.Dark.SplashFragment">
 
 	<View
 		android:id="@+id/blue_fill"
@@ -149,7 +149,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="16dp"
 				android:layout_marginRight="16dp"
-				style="@style/Widget.Mastodon.M3.Button.Filled"
+				style="@style/Widget.Cupoftea.M3.Button.Filled"
 				tools:text="@string/join_default_server"/>
 
 			<ProgressBar
@@ -215,7 +215,7 @@
 				android:layout_margin="8dp"
 				android:layout_weight="1"
 				android:textColor="#FFF"
-				style="@style/Widget.Mastodon.M3.Button.Text"
+				style="@style/Widget.Cupoftea.M3.Button.Text"
 				android:background="@drawable/bg_button_m3_text_white"
 				android:text="@string/learn_more"/>
 
@@ -226,7 +226,7 @@
 				android:layout_margin="8dp"
 				android:layout_weight="1"
 				android:textColor="#FFF"
-				style="@style/Widget.Mastodon.M3.Button.Text"
+				style="@style/Widget.Cupoftea.M3.Button.Text"
 				android:background="@drawable/bg_button_m3_text_white"
 				android:text="@string/log_in"/>
 

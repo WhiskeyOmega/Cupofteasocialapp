@@ -37,7 +37,7 @@
 		android:layout_marginStart="12dp"
 		android:layout_alignParentEnd="true"
 		android:layout_centerVertical="true"
-		style="@style/Widget.Mastodon.M3.Button.Outlined"
+		style="@style/Widget.Cupoftea.M3.Button.Outlined"
 		android:contentDescription="@string/allow_notifications"
 		android:src="@drawable/ic_check_24px"/>
 
@@ -48,7 +48,7 @@
 		android:layout_marginStart="12dp"
 		android:layout_toStartOf="@id/btn_allow"
 		android:layout_centerVertical="true"
-		style="@style/Widget.Mastodon.M3.Button.Outlined"
+		style="@style/Widget.Cupoftea.M3.Button.Outlined"
 		android:contentDescription="@string/mute_notifications"
 		android:src="@drawable/ic_delete_24px"/>
 	

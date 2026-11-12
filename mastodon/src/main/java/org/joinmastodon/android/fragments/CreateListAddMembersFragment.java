@@ -207,7 +207,7 @@ public class CreateListAddMembersFragment extends BaseAccountListFragment{
 		Button button=holder.getButton();
 		int textRes, styleRes;
 		textRes=R.string.remove;
-		styleRes=R.style.Widget_Mastodon_M3_Button_Tonal_Error;
+		styleRes=R.style.Widget_Cupoftea_M3_Button_Tonal_Error;
 		button.setText(textRes);
 		TypedArray ta=button.getContext().obtainStyledAttributes(styleRes, new int[]{android.R.attr.background});
 		button.setBackground(ta.getDrawable(0));

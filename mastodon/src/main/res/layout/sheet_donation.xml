@@ -41,21 +41,21 @@
 				android:layout_height="40dp"
 				android:orientation="horizontal"
 				android:layout_gravity="center"
-				style="@style/Widget.Mastodon.M3.SegmentedButtonContainer">
+				style="@style/Widget.Cupoftea.M3.SegmentedButtonContainer">
 
 				<FrameLayout
 					android:id="@+id/once"
-					style="@style/Widget.Mastodon.M3.SegmentedButton">
+					style="@style/Widget.Cupoftea.M3.SegmentedButton">
 					<org.joinmastodon.android.ui.views.CheckIconSelectableTextView
-						style="@style/Widget.Mastodon.M3.SegmentedButtonText"
+						style="@style/Widget.Cupoftea.M3.SegmentedButtonText"
 						android:text="@string/donation_once"/>
 				</FrameLayout>
 
 				<FrameLayout
 					android:id="@+id/monthly"
-					style="@style/Widget.Mastodon.M3.SegmentedButton">
+					style="@style/Widget.Cupoftea.M3.SegmentedButton">
 					<TextView
-						style="@style/Widget.Mastodon.M3.SegmentedButtonText"
+						style="@style/Widget.Cupoftea.M3.SegmentedButtonText"
 						android:drawableStart="@drawable/ic_donation_monthly"
 						android:drawableTint="?colorM3OnSurface"
 						android:text="@string/donation_monthly"/>
@@ -63,9 +63,9 @@
 
 				<FrameLayout
 					android:id="@+id/yearly"
-					style="@style/Widget.Mastodon.M3.SegmentedButton">
+					style="@style/Widget.Cupoftea.M3.SegmentedButton">
 					<org.joinmastodon.android.ui.views.CheckIconSelectableTextView
-						style="@style/Widget.Mastodon.M3.SegmentedButtonText"
+						style="@style/Widget.Cupoftea.M3.SegmentedButtonText"
 						android:text="@string/donation_yearly"/>
 				</FrameLayout>
 
@@ -90,14 +90,14 @@
 			android:layout_width="match_parent"
 			android:layout_height="40dp"
 			android:layout_marginTop="28dp"
-			style="@style/Widget.Mastodon.M3.Button.Filled">
+			style="@style/Widget.Cupoftea.M3.Button.Filled">
 			<TextView
 				android:id="@+id/button_text"
 				android:layout_width="wrap_content"
 				android:layout_height="40dp"
 				android:layout_gravity="center_horizontal"
 				android:drawableStart="@drawable/ic_volunteer_activism_20px"
-				style="@style/Widget.Mastodon.M3.Button.Filled"
+				style="@style/Widget.Cupoftea.M3.Button.Filled"
 				android:background="@null"
 				android:padding="0dp"
 				android:drawablePadding="8dp"

@@ -20,11 +20,11 @@ public class GlobalUserPreferences{
 	public static boolean showDebugSettings;
 
 	private static SharedPreferences getPrefs(){
-		return MastodonApp.context.getSharedPreferences("global", Context.MODE_PRIVATE);
+		return CupofteaApp.context.getSharedPreferences("global", Context.MODE_PRIVATE);
 	}
 
 	private static SharedPreferences getPreReplyPrefs(){
-		return MastodonApp.context.getSharedPreferences("pre_reply_sheets", Context.MODE_PRIVATE);
+		return CupofteaApp.context.getSharedPreferences("pre_reply_sheets", Context.MODE_PRIVATE);
 	}
 
 	public static void load(){

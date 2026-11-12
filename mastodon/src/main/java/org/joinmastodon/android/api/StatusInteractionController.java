@@ -3,7 +3,7 @@ package org.joinmastodon.android.api;
 import android.os.Looper;
 
 import org.joinmastodon.android.E;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.api.requests.statuses.SetStatusBookmarked;
 import org.joinmastodon.android.api.requests.statuses.SetStatusFavorited;
 import org.joinmastodon.android.api.requests.statuses.SetStatusReblogged;
@@ -47,7 +47,7 @@ public class StatusInteractionController{
 					@Override
 					public void onError(ErrorResponse error){
 						runningFavoriteRequests.remove(status.id);
-						error.showToast(MastodonApp.context);
+						error.showToast(CupofteaApp.context);
 						status.favourited=!favorited;
 						if(favorited)
 							status.favouritesCount--;
@@ -86,7 +86,7 @@ public class StatusInteractionController{
 					@Override
 					public void onError(ErrorResponse error){
 						runningReblogRequests.remove(status.id);
-						error.showToast(MastodonApp.context);
+						error.showToast(CupofteaApp.context);
 						status.reblogged=!reblogged;
 						if(reblogged)
 							status.reblogsCount--;
@@ -125,7 +125,7 @@ public class StatusInteractionController{
 					@Override
 					public void onError(ErrorResponse error){
 						runningBookmarkRequests.remove(status.id);
-						error.showToast(MastodonApp.context);
+						error.showToast(CupofteaApp.context);
 						status.bookmarked=!bookmarked;
 						E.post(new StatusCountersUpdatedEvent(status, StatusCountersUpdatedEvent.CounterType.BOOKMARKS));
 					}

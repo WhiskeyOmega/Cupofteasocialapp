@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.provider.OpenableColumns;
 import android.text.TextUtils;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.api.ContentUriRequestBody;
 import org.joinmastodon.android.api.MastodonAPIRequest;
 import org.joinmastodon.android.api.ProgressListener;

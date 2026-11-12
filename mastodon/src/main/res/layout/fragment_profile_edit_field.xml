@@ -70,7 +70,7 @@
 			android:drawablePadding="8dp"
 			android:drawableTint="@color/button_text_m3_tonal_error"
 			android:paddingHorizontal="16dp"
-			style="@style/Widget.Mastodon.M3.Button.Tonal.Error"/>
+			style="@style/Widget.Cupoftea.M3.Button.Tonal.Error"/>
 
 	</LinearLayout>
 

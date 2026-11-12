@@ -69,7 +69,7 @@
 			android:layout_height="40dp"
 			android:layout_below="@id/content_wrap"
 			android:layout_marginBottom="8dp"
-			style="@style/Widget.Mastodon.M3.Button.Tonal"
+			style="@style/Widget.Cupoftea.M3.Button.Tonal"
 			android:text="@string/got_it"/>
 
 		<Button
@@ -78,7 +78,7 @@
 			android:layout_height="40dp"
 			android:layout_below="@id/btn_got_it"
 			android:layout_marginBottom="8dp"
-			style="@style/Widget.Mastodon.M3.Button.Text"
+			style="@style/Widget.Cupoftea.M3.Button.Text"
 			android:text="@string/dont_remind_again"/>
 
 	</RelativeLayout>

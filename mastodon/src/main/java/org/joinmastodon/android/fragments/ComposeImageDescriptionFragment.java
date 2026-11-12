@@ -56,7 +56,7 @@ public class ComposeImageDescriptionFragment extends MastodonToolbarFragment{
 	@Override
 	public void onAttach(Activity activity){
 		super.onAttach(activity);
-		themeWrapper=new ContextThemeWrapper(activity, R.style.Theme_Mastodon_Dark);
+		themeWrapper=new ContextThemeWrapper(activity, R.style.Theme_Cupoftea_Dark);
 		setTitle(R.string.add_alt_text);
 	}
 

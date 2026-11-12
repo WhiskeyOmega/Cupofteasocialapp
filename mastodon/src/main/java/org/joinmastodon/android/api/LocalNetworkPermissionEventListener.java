@@ -5,7 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 
 import org.joinmastodon.android.MainActivity;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
@@ -30,7 +30,7 @@ public class LocalNetworkPermissionEventListener extends EventListener{
 
 	@Override
 	public void connectStart(Call call, InetSocketAddress addr, Proxy proxy){
-		if(addr.getAddress().isSiteLocalAddress() && MastodonApp.context.checkSelfPermission(Manifest.permission.ACCESS_LOCAL_NETWORK)!=PackageManager.PERMISSION_GRANTED){
+		if(addr.getAddress().isSiteLocalAddress() && CupofteaApp.context.checkSelfPermission(Manifest.permission.ACCESS_LOCAL_NETWORK)!=PackageManager.PERMISSION_GRANTED){
 			if(currentMainActivity!=null){
 				// TODO cancel and restart the request?
 				// TODO handle permission denial by showing something in the UI?

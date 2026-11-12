@@ -52,7 +52,7 @@
 		android:layout_below="@id/banner_description"
 		android:layout_toEndOf="@id/banner_icon"
 		android:layout_marginTop="8dp"
-		style="@style/Widget.Mastodon.M3.Button.Tonal.Warning"
+		style="@style/Widget.Cupoftea.M3.Button.Tonal.Warning"
 		android:text="@string/show"/>
 
 </RelativeLayout>

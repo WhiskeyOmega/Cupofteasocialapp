@@ -20,7 +20,7 @@ import com.google.android.gms.common.moduleinstall.internal.IModuleInstallCallba
 import com.google.android.gms.common.moduleinstall.internal.IModuleInstallService;
 import com.google.android.gms.common.moduleinstall.internal.IModuleInstallStatusListener;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.googleservices.GmsClient;
 import org.joinmastodon.android.ui.utils.UiUtils;
@@ -33,11 +33,11 @@ public class BarcodeScanner{
 	public static Intent createIntent(int formats, boolean allowManualInout, boolean enableAutoZoom){
 		Intent intent=new Intent().setPackage("com.google.android.gms").setAction("com.google.android.gms.mlkit.ACTION_SCAN_BARCODE");
 		String appName;
-		ApplicationInfo appInfo=MastodonApp.context.getApplicationInfo();
+		ApplicationInfo appInfo=CupofteaApp.context.getApplicationInfo();
 		if(appInfo.labelRes!=0)
-			appName=MastodonApp.context.getString(appInfo.labelRes);
+			appName=CupofteaApp.context.getString(appInfo.labelRes);
 		else
-			appName=MastodonApp.context.getPackageManager().getApplicationLabel(appInfo).toString();
+			appName=CupofteaApp.context.getPackageManager().getApplicationLabel(appInfo).toString();
 		intent.putExtra("extra_calling_app_name", appName);
 		intent.putExtra("extra_supported_formats", formats);
 		intent.putExtra("extra_allow_manual_input", allowManualInout);

@@ -64,7 +64,7 @@ import org.joinmastodon.android.E;
 import org.joinmastodon.android.FileProvider;
 import org.joinmastodon.android.GlobalUserPreferences;
 import org.joinmastodon.android.MainActivity;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.requests.accounts.RemoveAccountFromFollowers;
 import org.joinmastodon.android.api.requests.accounts.SetAccountBlocked;
@@ -375,7 +375,7 @@ public class UiUtils{
 
 	public static String getFileName(Uri uri){
 		if(uri.getScheme().equals("content")){
-			try(Cursor cursor=MastodonApp.context.getContentResolver().query(uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null)){
+			try(Cursor cursor=CupofteaApp.context.getContentResolver().query(uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null)){
 				cursor.moveToFirst();
 				String name=cursor.getString(0);
 				if(name!=null)
@@ -665,22 +665,22 @@ public class UiUtils{
 		int styleRes;
 		if(relationship.blocking){
 			button.setText(R.string.unblock);
-			styleRes=compact ? R.style.Widget_Mastodon_M3_Button_Tonal : R.style.Widget_Mastodon_M3_Button_Outlined_Neutral;
+			styleRes=compact ? R.style.Widget_Cupoftea_M3_Button_Tonal : R.style.Widget_Cupoftea_M3_Button_Outlined_Neutral;
 		}else if(!relationship.following && !relationship.followedBy && !relationship.requested){
 			button.setText(R.string.button_follow);
-			styleRes=R.style.Widget_Mastodon_M3_Button_Filled;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Filled;
 		}else if(!relationship.following && !relationship.requested && account.locked){
 			button.setText(compact ? R.string.request_to_follow_short : R.string.request_to_follow);
-			styleRes=R.style.Widget_Mastodon_M3_Button_Filled;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Filled;
 		}else if(!relationship.following && relationship.requested){
 			button.setText(compact ? R.string.cancel_follow_request_short : R.string.cancel_follow_request);
-			styleRes=compact ? R.style.Widget_Mastodon_M3_Button_Tonal : R.style.Widget_Mastodon_M3_Button_Outlined_Neutral;
+			styleRes=compact ? R.style.Widget_Cupoftea_M3_Button_Tonal : R.style.Widget_Cupoftea_M3_Button_Outlined_Neutral;
 		}else if(!relationship.following && relationship.followedBy){
 			button.setText(R.string.follow_back);
-			styleRes=R.style.Widget_Mastodon_M3_Button_Filled;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Filled;
 		}else{
 			button.setText(R.string.unfollow);
-			styleRes=compact ? R.style.Widget_Mastodon_M3_Button_Tonal : R.style.Widget_Mastodon_M3_Button_Outlined_Neutral;
+			styleRes=compact ? R.style.Widget_Cupoftea_M3_Button_Tonal : R.style.Widget_Cupoftea_M3_Button_Outlined_Neutral;
 		}
 
 		button.setEnabled(relationship.blocking || (!relationship.blockedBy && !account.suspended));
@@ -810,37 +810,37 @@ public class UiUtils{
 		if(GlobalUserPreferences.useDynamicColors){
 			return switch(pref){
 				case AUTO -> switch(getColorContrastMode(context)){
-					case DEFAULT -> R.style.Theme_Mastodon_AutoLightDark;
-					case MEDIUM -> R.style.Theme_Mastodon_AutoLightDark_MediumContrast;
-					case HIGH -> R.style.Theme_Mastodon_AutoLightDark_HighContrast;
+					case DEFAULT -> R.style.Theme_Cupoftea_AutoLightDark;
+					case MEDIUM -> R.style.Theme_Cupoftea_AutoLightDark_MediumContrast;
+					case HIGH -> R.style.Theme_Cupoftea_AutoLightDark_HighContrast;
 				};
 				case LIGHT -> switch(getColorContrastMode(context)){
-					case DEFAULT -> R.style.Theme_Mastodon_Light;
-					case MEDIUM -> R.style.Theme_Mastodon_Light_MediumContrast;
-					case HIGH -> R.style.Theme_Mastodon_Light_HighContrast;
+					case DEFAULT -> R.style.Theme_Cupoftea_Light;
+					case MEDIUM -> R.style.Theme_Cupoftea_Light_MediumContrast;
+					case HIGH -> R.style.Theme_Cupoftea_Light_HighContrast;
 				};
 				case DARK -> switch(getColorContrastMode(context)){
-					case DEFAULT -> R.style.Theme_Mastodon_Dark;
-					case MEDIUM -> R.style.Theme_Mastodon_Dark_MediumContrast;
-					case HIGH -> R.style.Theme_Mastodon_Dark_HighContrast;
+					case DEFAULT -> R.style.Theme_Cupoftea_Dark;
+					case MEDIUM -> R.style.Theme_Cupoftea_Dark_MediumContrast;
+					case HIGH -> R.style.Theme_Cupoftea_Dark_HighContrast;
 				};
 			};
 		}else{
 			return switch(pref){
 				case AUTO -> switch(getColorContrastMode(context)){
-					case DEFAULT -> R.style.Theme_Mastodon_AutoLightDark_Masterial;
-					case MEDIUM -> R.style.Theme_Mastodon_AutoLightDark_MediumContrast_Masterial;
-					case HIGH -> R.style.Theme_Mastodon_AutoLightDark_HighContrast_Masterial;
+					case DEFAULT -> R.style.Theme_Cupoftea_AutoLightDark_Masterial;
+					case MEDIUM -> R.style.Theme_Cupoftea_AutoLightDark_MediumContrast_Masterial;
+					case HIGH -> R.style.Theme_Cupoftea_AutoLightDark_HighContrast_Masterial;
 				};
 				case LIGHT -> switch(getColorContrastMode(context)){
-					case DEFAULT -> R.style.Theme_Mastodon_Light_Masterial;
-					case MEDIUM -> R.style.Theme_Mastodon_Light_MediumContrast_Masterial;
-					case HIGH -> R.style.Theme_Mastodon_Light_HighContrast_Masterial;
+					case DEFAULT -> R.style.Theme_Cupoftea_Light_Masterial;
+					case MEDIUM -> R.style.Theme_Cupoftea_Light_MediumContrast_Masterial;
+					case HIGH -> R.style.Theme_Cupoftea_Light_HighContrast_Masterial;
 				};
 				case DARK -> switch(getColorContrastMode(context)){
-					case DEFAULT -> R.style.Theme_Mastodon_Dark_Masterial;
-					case MEDIUM -> R.style.Theme_Mastodon_Dark_MediumContrast_Masterial;
-					case HIGH -> R.style.Theme_Mastodon_Dark_HighContrast_Masterial;
+					case DEFAULT -> R.style.Theme_Cupoftea_Dark_Masterial;
+					case MEDIUM -> R.style.Theme_Cupoftea_Dark_MediumContrast_Masterial;
+					case HIGH -> R.style.Theme_Cupoftea_Dark_HighContrast_Masterial;
 				};
 			};
 		}
@@ -848,7 +848,7 @@ public class UiUtils{
 
 	public static boolean isDarkTheme(){
 		if(GlobalUserPreferences.theme==GlobalUserPreferences.ThemePreference.AUTO)
-			return (MastodonApp.context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK)==Configuration.UI_MODE_NIGHT_YES;
+			return (CupofteaApp.context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK)==Configuration.UI_MODE_NIGHT_YES;
 		return GlobalUserPreferences.theme==GlobalUserPreferences.ThemePreference.DARK;
 	}
 

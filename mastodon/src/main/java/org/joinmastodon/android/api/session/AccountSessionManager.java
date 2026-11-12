@@ -32,7 +32,7 @@ import com.google.gson.reflect.TypeToken;
 import org.joinmastodon.android.BuildConfig;
 import org.joinmastodon.android.E;
 import org.joinmastodon.android.MainActivity;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.CacheController;
 import org.joinmastodon.android.api.DatabaseRunnable;
@@ -115,7 +115,7 @@ public class AccountSessionManager{
 	}
 
 	private AccountSessionManager(){
-		prefs=MastodonApp.context.getSharedPreferences("account_manager", Context.MODE_PRIVATE);
+		prefs=CupofteaApp.context.getSharedPreferences("account_manager", Context.MODE_PRIVATE);
 		runWithDatabase(db->{
 			HashSet<String> domains=new HashSet<>();
 			try(Cursor cursor=db.query("accounts", null, null, null, null, null, null)){
@@ -200,12 +200,12 @@ public class AccountSessionManager{
 		if(!TextUtils.isEmpty(session.pushToken))
 			session.getPushSubscriptionManager().unregisterFCM();
 		session.getCacheController().closeDatabase();
-		MastodonApp.context.deleteDatabase(id+".db");
-		MastodonApp.context.getSharedPreferences(id, 0).edit().clear().commit();
+		CupofteaApp.context.deleteDatabase(id+".db");
+		CupofteaApp.context.getSharedPreferences(id, 0).edit().clear().commit();
 		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
-			MastodonApp.context.deleteSharedPreferences(id);
+			CupofteaApp.context.deleteSharedPreferences(id);
 		}else{
-			String dataDir=MastodonApp.context.getApplicationInfo().dataDir;
+			String dataDir=CupofteaApp.context.getApplicationInfo().dataDir;
 			if(dataDir!=null){
 				File prefsDir=new File(dataDir, "shared_prefs");
 				new File(prefsDir, id+".xml").delete();
@@ -224,7 +224,7 @@ public class AccountSessionManager{
 			db.delete("instances", "`domain` NOT IN (SELECT DISTINCT `domain` FROM `accounts`)", new String[]{});
 		});
 		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
-			NotificationManager nm=MastodonApp.context.getSystemService(NotificationManager.class);
+			NotificationManager nm=CupofteaApp.context.getSystemService(NotificationManager.class);
 			try{
 				nm.deleteNotificationChannelGroup(id);
 			}catch(Exception ignore){}
@@ -613,29 +613,29 @@ public class AccountSessionManager{
 	private void maybeUpdateShortcuts(){
 		if(Build.VERSION.SDK_INT<26)
 			return;
-		ShortcutManager sm=MastodonApp.context.getSystemService(ShortcutManager.class);
+		ShortcutManager sm=CupofteaApp.context.getSystemService(ShortcutManager.class);
 		if((sm.getDynamicShortcuts().isEmpty() || BuildConfig.DEBUG) && !sessions.isEmpty()){
 			// There are no shortcuts, but there are accounts. Add a compose shortcut.
-			ShortcutInfo compose=new ShortcutInfo.Builder(MastodonApp.context, "compose")
-					.setActivity(ComponentName.createRelative(MastodonApp.context, MainActivity.class.getName()))
-					.setShortLabel(MastodonApp.context.getString(R.string.new_post))
-					.setIcon(Icon.createWithResource(MastodonApp.context, R.mipmap.ic_shortcut_compose))
-					.setIntent(new Intent(MastodonApp.context, MainActivity.class)
+			ShortcutInfo compose=new ShortcutInfo.Builder(CupofteaApp.context, "compose")
+					.setActivity(ComponentName.createRelative(CupofteaApp.context, MainActivity.class.getName()))
+					.setShortLabel(CupofteaApp.context.getString(R.string.new_post))
+					.setIcon(Icon.createWithResource(CupofteaApp.context, R.mipmap.ic_shortcut_compose))
+					.setIntent(new Intent(CupofteaApp.context, MainActivity.class)
 							.setAction(Intent.ACTION_MAIN)
 							.putExtra("compose", true))
 					.build();
-			ShortcutInfo explore=new ShortcutInfo.Builder(MastodonApp.context, "explore")
-					.setActivity(ComponentName.createRelative(MastodonApp.context, MainActivity.class.getName()))
-					.setShortLabel(MastodonApp.context.getString(R.string.tab_search))
-					.setIcon(Icon.createWithResource(MastodonApp.context, R.mipmap.ic_shortcut_explore))
-					.setIntent(new Intent(MastodonApp.context, MainActivity.class)
+			ShortcutInfo explore=new ShortcutInfo.Builder(CupofteaApp.context, "explore")
+					.setActivity(ComponentName.createRelative(CupofteaApp.context, MainActivity.class.getName()))
+					.setShortLabel(CupofteaApp.context.getString(R.string.tab_search))
+					.setIcon(Icon.createWithResource(CupofteaApp.context, R.mipmap.ic_shortcut_explore))
+					.setIntent(new Intent(CupofteaApp.context, MainActivity.class)
 							.setAction(Intent.ACTION_MAIN)
 							.putExtra("explore", true))
 					.build();
 			sm.setDynamicShortcuts(List.of(compose, explore));
 		}else if(sessions.isEmpty()){
 			// There are shortcuts, but no accounts. Disable existing shortcuts.
-			sm.disableShortcuts(List.of("compose", "explore"), MastodonApp.context.getString(R.string.err_not_logged_in));
+			sm.disableShortcuts(List.of("compose", "explore"), CupofteaApp.context.getString(R.string.err_not_logged_in));
 		}else{
 			sm.enableShortcuts(List.of("compose", "explore"));
 		}
@@ -795,7 +795,7 @@ public class AccountSessionManager{
 
 	private static class DatabaseHelper extends SQLiteOpenHelper{
 		public DatabaseHelper(){
-			super(MastodonApp.context, "accounts.db", null, DB_VERSION);
+			super(CupofteaApp.context, "accounts.db", null, DB_VERSION);
 		}
 
 		@Override
@@ -859,7 +859,7 @@ public class AccountSessionManager{
 		}
 
 		private void maybeMigrateAccounts(SQLiteDatabase db){
-			File accountsFile=new File(MastodonApp.context.getFilesDir(), "accounts.json");
+			File accountsFile=new File(CupofteaApp.context.getFilesDir(), "accounts.json");
 			if(accountsFile.exists()){
 				HashSet<String> domains=new HashSet<>();
 				try(FileInputStream in=new FileInputStream(accountsFile)){
@@ -878,7 +878,7 @@ public class AccountSessionManager{
 				}
 				accountsFile.delete();
 				for(String domain:domains){
-					File file=new File(MastodonApp.context.getFilesDir(), "instance_"+domain.replace('.', '_')+".json");
+					File file=new File(CupofteaApp.context.getFilesDir(), "instance_"+domain.replace('.', '_')+".json");
 					try(FileInputStream in=new FileInputStream(file)){
 						JsonObject jobj=JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
 						insertInstanceIntoDatabase(db, domain, MastodonAPIController.gson.fromJson(jobj.get(jobj.has("instance") ? "instance" : "a"), Instance.class),

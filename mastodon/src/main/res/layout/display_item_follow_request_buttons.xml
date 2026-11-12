@@ -21,7 +21,7 @@
 		android:drawableTint="@color/button_text_m3_filled"
 		android:textAlignment="center"
 		android:text="@string/confirm"
-		style="@style/Widget.Mastodon.M3.Button.Filled" />
+		style="@style/Widget.Cupoftea.M3.Button.Filled" />
 	<Button
 		android:id="@+id/notification_decline"
 		android:layout_width="0dp"
@@ -35,6 +35,6 @@
 		android:drawableTint="@color/button_text_m3_filled_secondary"
 		android:textAlignment="center"
 		android:text="@string/delete"
-		style="@style/Widget.Mastodon.M3.Button.Filled.Secondary" />
+		style="@style/Widget.Cupoftea.M3.Button.Filled.Secondary" />
 
 </LinearLayout>

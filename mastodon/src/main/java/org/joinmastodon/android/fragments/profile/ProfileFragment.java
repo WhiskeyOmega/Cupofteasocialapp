@@ -728,10 +728,10 @@ public class ProfileFragment extends LoaderFragment implements ScrollableToTop, 
 		notificationsButton.setVisibility(View.GONE);
 		if(isSelf){
 			actionButton.setText(R.string.edit_profile);
-			TypedArray ta=actionButton.getContext().obtainStyledAttributes(R.style.Widget_Mastodon_M3_Button_Outlined_Neutral, new int[]{android.R.attr.background});
+			TypedArray ta=actionButton.getContext().obtainStyledAttributes(R.style.Widget_Cupoftea_M3_Button_Outlined_Neutral, new int[]{android.R.attr.background});
 			actionButton.setBackground(ta.getDrawable(0));
 			ta.recycle();
-			ta=actionButton.getContext().obtainStyledAttributes(R.style.Widget_Mastodon_M3_Button_Outlined_Neutral, new int[]{android.R.attr.textColor});
+			ta=actionButton.getContext().obtainStyledAttributes(R.style.Widget_Cupoftea_M3_Button_Outlined_Neutral, new int[]{android.R.attr.textColor});
 			actionButton.setTextColor(ta.getColorStateList(0));
 			ta.recycle();
 		}else{

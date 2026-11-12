@@ -4,7 +4,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.OpenableColumns;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class ContentUriRequestBody extends CountingRequestBody{
 	public ContentUriRequestBody(Uri uri, ProgressListener progressListener){
 		super(progressListener);
 		this.uri=uri;
-		try(Cursor cursor=MastodonApp.context.getContentResolver().query(uri, new String[]{OpenableColumns.SIZE}, null, null, null)){
+		try(Cursor cursor=CupofteaApp.context.getContentResolver().query(uri, new String[]{OpenableColumns.SIZE}, null, null, null)){
 			cursor.moveToFirst();
 			length=cursor.getInt(0);
 		}
@@ -26,11 +26,11 @@ public class ContentUriRequestBody extends CountingRequestBody{
 
 	@Override
 	public MediaType contentType(){
-		return MediaType.get(MastodonApp.context.getContentResolver().getType(uri));
+		return MediaType.get(CupofteaApp.context.getContentResolver().getType(uri));
 	}
 
 	@Override
 	protected Source openSource() throws IOException{
-		return Okio.source(MastodonApp.context.getContentResolver().openInputStream(uri));
+		return Okio.source(CupofteaApp.context.getContentResolver().openInputStream(uri));
 	}
 }

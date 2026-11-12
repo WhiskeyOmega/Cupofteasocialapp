@@ -101,7 +101,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="16dp"
-			style="@style/Widget.Mastodon.M3.Button.Outlined.Neutral"
+			style="@style/Widget.Cupoftea.M3.Button.Outlined.Neutral"
 			android:drawableStart="@drawable/ic_content_copy_20px"
 			android:drawableTint="@color/button_text_m3_neutral"
 			android:drawablePadding="8dp"

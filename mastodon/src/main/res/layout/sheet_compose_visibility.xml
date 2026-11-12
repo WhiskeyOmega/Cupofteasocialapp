@@ -96,7 +96,7 @@
 				android:id="@+id/cancel"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				style="@style/Widget.Mastodon.M3.Button.Text"
+				style="@style/Widget.Cupoftea.M3.Button.Text"
 				android:minWidth="0dp"
 				android:paddingHorizontal="16dp"
 				android:text="@string/cancel"/>
@@ -105,7 +105,7 @@
 				android:id="@+id/save"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				style="@style/Widget.Mastodon.M3.Button.Text"
+				style="@style/Widget.Cupoftea.M3.Button.Text"
 				android:minWidth="0dp"
 				android:paddingHorizontal="16dp"
 				android:text="@string/save"/>

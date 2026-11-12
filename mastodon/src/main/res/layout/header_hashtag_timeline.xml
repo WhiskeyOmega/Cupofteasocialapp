@@ -33,7 +33,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="36dp"
 			android:layout_gravity="center"
-			style="@style/Widget.Mastodon.M3.Button.Filled"
+			style="@style/Widget.Cupoftea.M3.Button.Filled"
 			android:paddingHorizontal="16dp"
 			tools:text="@string/button_follow" />
 

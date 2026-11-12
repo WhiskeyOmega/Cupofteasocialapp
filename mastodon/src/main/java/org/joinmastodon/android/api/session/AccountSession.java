@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 
 import org.joinmastodon.android.E;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.CacheController;
 import org.joinmastodon.android.api.MastodonAPIController;
@@ -242,7 +242,7 @@ public class AccountSession{
 
 	public SharedPreferences getRawLocalPreferences(){
 		if(prefs==null)
-			prefs=MastodonApp.context.getSharedPreferences(getID(), Context.MODE_PRIVATE);
+			prefs=CupofteaApp.context.getSharedPreferences(getID(), Context.MODE_PRIVATE);
 		return prefs;
 	}
 

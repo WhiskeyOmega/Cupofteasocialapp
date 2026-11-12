@@ -206,10 +206,10 @@ public class HashtagTimelineFragment extends StatusListFragment{
 		followButton.setVisibility(View.VISIBLE);
 		if(hashtag.following){
 			followButton.setText(R.string.button_following);
-			styleRes=R.style.Widget_Mastodon_M3_Button_Tonal;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Tonal;
 		}else{
 			followButton.setText(R.string.button_follow);
-			styleRes=R.style.Widget_Mastodon_M3_Button_Filled;
+			styleRes=R.style.Widget_Cupoftea_M3_Button_Filled;
 		}
 		TypedArray ta=followButton.getContext().obtainStyledAttributes(styleRes, new int[]{android.R.attr.background});
 		followButton.setBackground(ta.getDrawable(0));

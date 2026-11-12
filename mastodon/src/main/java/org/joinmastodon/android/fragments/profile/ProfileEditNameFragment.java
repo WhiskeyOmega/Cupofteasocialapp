@@ -53,7 +53,7 @@ public class ProfileEditNameFragment extends MastodonToolbarFragment{
 		editWrap.updateHint();
 		editWrap.setErrorTextAsDescription(getResources().getQuantityString(R.plurals.x_chars_max, 30, 30));
 
-		saveButton=new Button(getActivity(), null, 0, R.style.Widget_Mastodon_M3_Button_Filled);
+		saveButton=new Button(getActivity(), null, 0, R.style.Widget_Cupoftea_M3_Button_Filled);
 		saveButton.setText(R.string.save);
 		saveButton.setEnabled(buttonEnabled);
 		int pad=V.dp(16);

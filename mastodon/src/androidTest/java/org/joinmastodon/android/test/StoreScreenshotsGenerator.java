@@ -10,7 +10,7 @@ import org.hamcrest.CoreMatchers;
 import org.hamcrest.Matcher;
 import org.joinmastodon.android.GlobalUserPreferences;
 import org.joinmastodon.android.MainActivity;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.requests.instance.GetInstanceV2;
 import org.joinmastodon.android.api.requests.statuses.GetStatusByID;
@@ -68,7 +68,7 @@ public class StoreScreenshotsGenerator{
 
 	@Test
 	public void takeScreenshots() throws Exception{
-		File photo=new File(MastodonApp.context.getCacheDir(), PHOTO_FILE);
+		File photo=new File(CupofteaApp.context.getCacheDir(), PHOTO_FILE);
 		try(Source source=Okio.source(InstrumentationRegistry.getInstrumentation().getContext().getAssets().open(PHOTO_FILE)); BufferedSink sink=Okio.buffer(Okio.sink(photo))){
 			sink.writeAll(source);
 			sink.flush();

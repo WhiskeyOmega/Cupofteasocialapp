@@ -168,7 +168,7 @@ public class ProfileQrCodeFragment extends AppKitFragment{
 	@Override
 	public void onAttach(Activity activity){
 		super.onAttach(activity);
-		themeWrapper=new ContextThemeWrapper(activity, R.style.Theme_Mastodon_Dark);
+		themeWrapper=new ContextThemeWrapper(activity, R.style.Theme_Cupoftea_Dark);
 	}
 
 	@SuppressLint("ClickableViewAccessibility")

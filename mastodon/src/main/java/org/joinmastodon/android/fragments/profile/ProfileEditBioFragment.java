@@ -51,7 +51,7 @@ public class ProfileEditBioFragment extends MastodonToolbarFragment{
 		edit.addTextChangedListener(new SimpleTextWatcher(text->saveButton.setEnabled(buttonEnabled=true)));
 		editWrap.updateHint();
 
-		saveButton=new Button(getActivity(), null, 0, R.style.Widget_Mastodon_M3_Button_Filled);
+		saveButton=new Button(getActivity(), null, 0, R.style.Widget_Cupoftea_M3_Button_Filled);
 		saveButton.setText(R.string.save);
 		saveButton.setEnabled(buttonEnabled);
 		int pad=V.dp(16);

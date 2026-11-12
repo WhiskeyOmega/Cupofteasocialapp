@@ -29,13 +29,13 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:enabled="false"
-			style="@style/Widget.Mastodon.M3.Button.Filled"
+			style="@style/Widget.Cupoftea.M3.Button.Filled"
 			android:text="@string/action_vote"/>
 		<Button
 			android:id="@+id/show_results_btn"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			style="@style/Widget.Mastodon.M3.Button.Tonal"
+			style="@style/Widget.Cupoftea.M3.Button.Tonal"
 			android:text="@string/poll_see_results"/>
 	</LinearLayout>
 

@@ -11,7 +11,7 @@ import android.util.Base64;
 import android.util.Log;
 
 import org.joinmastodon.android.BuildConfig;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.api.requests.notifications.RegisterForPushNotifications;
 import org.joinmastodon.android.api.requests.notifications.UpdatePushSettings;
 import org.joinmastodon.android.api.session.AccountSession;
@@ -117,7 +117,7 @@ public class PushSubscriptionManager{
 
 		Intent intent=new Intent("com.google.android.c2dm.intent.REGISTER");
 		intent.setPackage("com.google.android.gms");
-		intent.putExtra("app", PendingIntent.getBroadcast(MastodonApp.context, 0, new Intent(), PendingIntent.FLAG_IMMUTABLE));
+		intent.putExtra("app", PendingIntent.getBroadcast(CupofteaApp.context, 0, new Intent(), PendingIntent.FLAG_IMMUTABLE));
 		String sender=session.getInstanceInfo().getVapidPublicKey();
 		if(sender==null){
 			Log.w(TAG, "Can't register account "+accountID+" for push because the server does not provide a public key");
@@ -133,7 +133,7 @@ public class PushSubscriptionManager{
 		intent.putExtra("scope", "GCM");
 		intent.putExtra("kid", "|ID|"+accountID+"|");
 		try{
-			MastodonApp.context.startService(intent);
+			CupofteaApp.context.startService(intent);
 		}catch(Exception x){
 			Log.w(TAG, "Failed to request push token for account "+accountID, x);
 		}
@@ -143,7 +143,7 @@ public class PushSubscriptionManager{
 		AccountSession session=AccountSessionManager.getInstance().tryGetAccount(accountID);
 		Intent intent=new Intent("com.google.android.c2dm.intent.REGISTER");
 		intent.setPackage("com.google.android.gms");
-		intent.putExtra("app", PendingIntent.getBroadcast(MastodonApp.context, 0, new Intent(), PendingIntent.FLAG_IMMUTABLE));
+		intent.putExtra("app", PendingIntent.getBroadcast(CupofteaApp.context, 0, new Intent(), PendingIntent.FLAG_IMMUTABLE));
 		String sender=session.getInstanceInfo().getVapidPublicKey();
 		if(sender==null){
 			Log.w(TAG, "Can't unregister account "+accountID+" for push because the server does not provide a public key");
@@ -159,7 +159,7 @@ public class PushSubscriptionManager{
 		intent.putExtra("kid", "|ID|"+accountID+"|");
 		intent.putExtra("delete", "1");
 		try{
-			MastodonApp.context.startService(intent);
+			CupofteaApp.context.startService(intent);
 		}catch(Exception x){
 			Log.w(TAG, "Failed to revoke push token for account "+accountID, x);
 		}
@@ -174,7 +174,7 @@ public class PushSubscriptionManager{
 	}
 
 	private static SharedPreferences getPrefs(){
-		return MastodonApp.context.getSharedPreferences("push", Context.MODE_PRIVATE);
+		return CupofteaApp.context.getSharedPreferences("push", Context.MODE_PRIVATE);
 	}
 
 	private void registerAccountForPush(PushSubscription subscription){

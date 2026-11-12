@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import org.joinmastodon.android.E;
 import org.joinmastodon.android.GlobalUserPreferences;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.events.StatusDisplaySettingsChangedEvent;
 import org.joinmastodon.android.model.viewmodel.CheckableListItem;
@@ -135,7 +135,7 @@ public class SettingsDisplayFragment extends BaseSettingsFragment<Void>{
 			View activityDecorView=getActivity().getWindow().getDecorView();
 			Bitmap bitmap=Bitmap.createBitmap(activityDecorView.getWidth(), activityDecorView.getHeight(), Bitmap.Config.ARGB_8888);
 			activityDecorView.draw(new Canvas(bitmap));
-			themeTransitionWindowView=new ImageView(MastodonApp.context);
+			themeTransitionWindowView=new ImageView(CupofteaApp.context);
 			themeTransitionWindowView.setImageBitmap(bitmap);
 			WindowManager.LayoutParams lp=new WindowManager.LayoutParams(WindowManager.LayoutParams.TYPE_APPLICATION);
 			lp.flags=WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE |
@@ -145,7 +145,7 @@ public class SettingsDisplayFragment extends BaseSettingsFragment<Void>{
 			lp.width=lp.height=WindowManager.LayoutParams.MATCH_PARENT;
 			lp.token=getActivity().getWindow().getAttributes().token;
 			lp.windowAnimations=R.style.window_fade_out;
-			MastodonApp.context.getSystemService(WindowManager.class).addView(themeTransitionWindowView, lp);
+			CupofteaApp.context.getSystemService(WindowManager.class).addView(themeTransitionWindowView, lp);
 		}
 		getActivity().recreate();
 	}

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.session.AccountSessionManager;
 
@@ -38,7 +38,7 @@ public class DiscoverInfoBannerHelper{
 	}
 
 	private static SharedPreferences getPrefs(){
-		return MastodonApp.context.getSharedPreferences("onboarding", Context.MODE_PRIVATE);
+		return CupofteaApp.context.getSharedPreferences("onboarding", Context.MODE_PRIVATE);
 	}
 
 	public void maybeAddBanner(RecyclerView list, MergeRecyclerAdapter adapter){

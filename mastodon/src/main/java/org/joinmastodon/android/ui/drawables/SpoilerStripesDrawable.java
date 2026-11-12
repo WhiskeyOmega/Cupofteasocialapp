@@ -7,7 +7,7 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,7 +33,7 @@ public class SpoilerStripesDrawable extends Drawable{
 		canvas.save();
 		canvas.translate(bounds.left, bounds.top);
 		canvas.clipRect(0, 0, bounds.width(), bounds.height());
-		float scale=MastodonApp.context.getResources().getDisplayMetrics().density;
+		float scale=CupofteaApp.context.getResources().getDisplayMetrics().density;
 		if(bounds.width()>V.dp(10))
 			scale*=2;
 		canvas.scale(scale, scale, 0, 0);

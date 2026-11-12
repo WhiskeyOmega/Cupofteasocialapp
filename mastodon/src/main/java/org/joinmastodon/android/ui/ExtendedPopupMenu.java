@@ -22,7 +22,7 @@ public class ExtendedPopupMenu extends PopupWindow{
 	private UsableRecyclerView list;
 
 	public <T> ExtendedPopupMenu(Context context, List<ListItem<T>> items){
-		super(context, null, 0, R.style.Widget_Mastodon_PopupMenu);
+		super(context, null, 0, R.style.Widget_Cupoftea_PopupMenu);
 		setWidth(V.dp(200));
 		setElevation(V.dp(3));
 		setOutsideTouchable(true);

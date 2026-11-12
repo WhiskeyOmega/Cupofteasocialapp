@@ -1,6 +1,6 @@
 First Launched in 2022. This is the app for the Mastodon Community of Cupoftea.social. A Wholesome & Positive social network that puts the human being back in social networks. Described as a breath of fresh air by some.
 
-Cupoftea.social is a instance of Mastodon, this app is a reskin of the Mastodon App with customized features specifically designed for it.
+Cupoftea.social is an instance of Mastodon, this app is a reskin of the Mastodon App with customized features specifically designed for it.
 
 Cupoftea.social is not affiliated with Mastodon GmbH
 

@@ -34,7 +34,7 @@
 			android:layout_height="wrap_content"
 			android:minHeight="0dp"
 			android:minWidth="0dp"
-			style="@style/Widget.Mastodon.M3.Button.Text"
+			style="@style/Widget.Cupoftea.M3.Button.Text"
 			android:paddingHorizontal="8dp"
 			android:paddingVertical="4dp"
 			android:layout_marginVertical="-4dp"

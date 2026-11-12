@@ -12,7 +12,7 @@ import android.util.Log;
 import com.google.gson.reflect.TypeToken;
 
 import org.joinmastodon.android.BuildConfig;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.api.requests.lists.GetLists;
 import org.joinmastodon.android.api.requests.notifications.GetNotificationsV1;
 import org.joinmastodon.android.api.requests.notifications.GetNotificationsV2;
@@ -553,7 +553,7 @@ public class CacheController{
 	private class DatabaseHelper extends SQLiteOpenHelper{
 
 		public DatabaseHelper(){
-			super(MastodonApp.context, accountID+".db", null, DB_VERSION);
+			super(CupofteaApp.context, accountID+".db", null, DB_VERSION);
 		}
 
 		@Override

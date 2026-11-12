@@ -18,7 +18,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 
 import org.joinmastodon.android.BuildConfig;
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.api.gson.IsoInstantTypeAdapter;
 import org.joinmastodon.android.api.gson.IsoLocalDateTypeAdapter;
 import org.joinmastodon.android.api.requests.async_refreshes.GetAsyncRefresh;
@@ -69,9 +69,9 @@ public class MastodonAPIController{
 				.connectTimeout(60, TimeUnit.SECONDS)
 				.writeTimeout(60, TimeUnit.SECONDS)
 				.readTimeout(60, TimeUnit.SECONDS)
-				.cache(new Cache(new File(MastodonApp.context.getCacheDir(), "http"), 10*1024*1024));
+				.cache(new Cache(new File(CupofteaApp.context.getCacheDir(), "http"), 10*1024*1024));
 		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.CINNAMON_BUN
-				&& MastodonApp.context.checkSelfPermission(Manifest.permission.ACCESS_LOCAL_NETWORK)!=PackageManager.PERMISSION_GRANTED){
+				&& CupofteaApp.context.checkSelfPermission(Manifest.permission.ACCESS_LOCAL_NETWORK)!=PackageManager.PERMISSION_GRANTED){
 			// Added statically like this because the app process will be force restarted anyway when the permission is revoked
 			builder.eventListener(LocalNetworkPermissionEventListener.getInstance());
 		}
@@ -168,7 +168,7 @@ public class MastodonAPIController{
 									msg+=date.atZone(ZoneId.systemDefault()).format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
 									Log.w(TAG, logTag(session)+msg);
 									final String finalMsg=msg;
-									uiThreadHandler.post(()->Toast.makeText(MastodonApp.context, finalMsg, Toast.LENGTH_SHORT).show());
+									uiThreadHandler.post(()->Toast.makeText(CupofteaApp.context, finalMsg, Toast.LENGTH_SHORT).show());
 								}catch(NumberFormatException ignored){}
 							}
 						}

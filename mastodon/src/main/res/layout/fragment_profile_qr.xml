@@ -100,13 +100,13 @@
 				android:layout_height="40dp"
 				android:layout_weight="1"
 				android:paddingStart="16dp"
-				style="@style/Widget.Mastodon.M3.Button.Filled">
+				style="@style/Widget.Cupoftea.M3.Button.Filled">
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="40dp"
 					android:layout_gravity="center_horizontal"
 					android:drawableStart="@drawable/ic_share_20px"
-					style="@style/Widget.Mastodon.M3.Button.Filled"
+					style="@style/Widget.Cupoftea.M3.Button.Filled"
 					android:background="@null"
 					android:padding="0dp"
 					android:drawablePadding="7dp"
@@ -123,14 +123,14 @@
 				android:layout_height="40dp"
 				android:layout_marginStart="16dp"
 				android:paddingStart="16dp"
-				style="@style/Widget.Mastodon.M3.Button.Filled">
+				style="@style/Widget.Cupoftea.M3.Button.Filled">
 				<TextView
 					android:id="@+id/save_text"
 					android:layout_width="wrap_content"
 					android:layout_height="40dp"
 					android:layout_gravity="center_horizontal"
 					android:drawableStart="@drawable/ic_download_20px"
-					style="@style/Widget.Mastodon.M3.Button.Filled"
+					style="@style/Widget.Cupoftea.M3.Button.Filled"
 					android:background="@null"
 					android:padding="0dp"
 					android:drawablePadding="7dp"

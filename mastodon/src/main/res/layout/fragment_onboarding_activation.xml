@@ -76,7 +76,7 @@
 			android:paddingLeft="12dp"
 			android:paddingRight="12dp"
 			android:fontFeatureSettings="'tnum'"
-			style="@style/Widget.Mastodon.M3.Button.Filled"/>
+			style="@style/Widget.Cupoftea.M3.Button.Filled"/>
 
 	</LinearLayout>
 
@@ -89,7 +89,7 @@
 		android:layout_marginTop="16dp"
 		android:layout_marginBottom="16dp"
 		android:minWidth="145dp"
-		style="@style/Widget.Mastodon.M3.Button.Filled"
+		style="@style/Widget.Cupoftea.M3.Button.Filled"
 		android:text="@string/open_email_app" />
 
 </LinearLayout>

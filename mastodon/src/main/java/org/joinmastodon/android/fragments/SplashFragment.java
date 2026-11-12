@@ -19,7 +19,7 @@ import android.view.WindowInsets;
 import android.view.animation.LinearInterpolator;
 import android.widget.ProgressBar;
 
-import org.joinmastodon.android.MastodonApp;
+import org.joinmastodon.android.CupofteaApp;
 import org.joinmastodon.android.R;
 import org.joinmastodon.android.api.MastodonErrorResponse;
 import org.joinmastodon.android.api.requests.accounts.CheckInviteLink;
@@ -67,7 +67,7 @@ public class SplashFragment extends AppKitFragment{
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
-		motionEffect=new InterpolatingMotionEffect(MastodonApp.context);
+		motionEffect=new InterpolatingMotionEffect(CupofteaApp.context);
 	}
 
 	@Nullable
@@ -290,7 +290,7 @@ public class SplashFragment extends AppKitFragment{
 		if(steamLeft==null || steamRight==null)
 			return;
 		// Respect "remove animations" / animator duration scale 0: leave the steam static
-		if(Settings.Global.getFloat(MastodonApp.context.getContentResolver(), Settings.Global.ANIMATOR_DURATION_SCALE, 1f)==0f)
+		if(Settings.Global.getFloat(CupofteaApp.context.getContentResolver(), Settings.Global.ANIMATOR_DURATION_SCALE, 1f)==0f)
 			return;
 		steamLeft.setAlpha(0f);
 		steamRight.setAlpha(0f);

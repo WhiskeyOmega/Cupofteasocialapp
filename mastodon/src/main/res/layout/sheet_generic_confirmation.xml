@@ -55,7 +55,7 @@
 				android:id="@+id/btn_confirm"
 				android:layout_width="match_parent"
 				android:layout_height="40dp"
-				style="@style/Widget.Mastodon.M3.Button.Filled"
+				style="@style/Widget.Cupoftea.M3.Button.Filled"
 				app:progressBar="@id/confirm_progress"
 				tools:text="@string/got_it"/>
 			<ProgressBar
@@ -80,7 +80,7 @@
 				android:id="@+id/btn_secondary"
 				android:layout_width="match_parent"
 				android:layout_height="40dp"
-				style="@style/Widget.Mastodon.M3.Button.Tonal"
+				style="@style/Widget.Cupoftea.M3.Button.Tonal"
 				app:progressBar="@id/secondary_progress"
 				tools:text="@string/got_it"/>
 			<ProgressBar
@@ -101,7 +101,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="40dp"
 			android:layout_marginBottom="8dp"
-			style="@style/Widget.Mastodon.M3.Button.Text"
+			style="@style/Widget.Cupoftea.M3.Button.Text"
 			android:text="@string/cancel"/>
 
 	</LinearLayout>

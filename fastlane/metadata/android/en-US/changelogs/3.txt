@@ -1,0 +1,2 @@
+• Updated the date of birth explanation shown when signing up
+• Translation fixes

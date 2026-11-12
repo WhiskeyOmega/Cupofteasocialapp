@@ -917,7 +917,7 @@ Kuo daugiau žmonių sekate, tuo aktyvesnis ir įdomesnis jis bus.</string>
 	<string name="report_reason_legal_subtitle">Manote, kad tai pažeidžia tavo arba serverio šalies įstatymus</string>
 	<string name="date_of_birth">Gimimo data</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Turime įsitikinti, kad esate bent %s norint naudoti „Mastodon“. Tai nebus išsaugota po registracijos.</string>
+	<string name="date_of_birth_explanation">Turime įsitikinti, kad esate bent %s norint naudoti „Cupoftea.social“. Tai nebus išsaugota po registracijos.</string>
 	<string name="open_link">Atverti</string>
 	<string name="copy">Kopijuoti</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

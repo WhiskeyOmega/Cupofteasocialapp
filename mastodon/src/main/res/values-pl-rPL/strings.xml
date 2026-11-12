@@ -917,7 +917,7 @@ Im więcej ludzi obserwujesz, tym aktywniejsza i bardziej interesująca się sta
 	<string name="report_reason_legal_subtitle">Uważasz, że to narusza prawo twojego kraju lub kraju, w którym znajduje się serwer</string>
 	<string name="date_of_birth">Data urodzenia</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Musimy się upewnić, że masz przynajmniej %s lat, by móc używać Mastodona. Twój wiek nie zostanie przechowany po rejestracji.</string>
+	<string name="date_of_birth_explanation">Musimy się upewnić, że masz przynajmniej %s lat, by móc używać Cupoftea.social. Twój wiek nie zostanie przechowany po rejestracji.</string>
 	<string name="open_link">Otwórz</string>
 	<string name="copy">Kopiuj</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

@@ -829,7 +829,7 @@ Jo flere du følger, jo mere aktiv og interessant bliver det.</string>
 	<string name="report_reason_legal_subtitle">Du mener, at det er i strid med lovgivningen i dit eller serverens land</string>
 	<string name="date_of_birth">Fødselsdato</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Vi skal sikre, at du mindst er %s for at bruge Mastodon. Dette bliver ikke gemt efter tilmeldingen.</string>
+	<string name="date_of_birth_explanation">Vi skal sikre, at du mindst er %s for at bruge Cupoftea.social. Dette bliver ikke gemt efter tilmeldingen.</string>
 	<string name="open_link">Åbn</string>
 	<string name="copy">Kopiér</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

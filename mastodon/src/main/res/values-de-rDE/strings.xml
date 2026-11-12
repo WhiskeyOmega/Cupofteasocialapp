@@ -828,7 +828,7 @@
 	<string name="report_reason_legal_subtitle">Du glaubst, dass es gegen die Gesetze deines Landes oder des Landes des Servers verstößt</string>
 	<string name="date_of_birth">Geburtsdatum</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Wir müssen sicherstellen, dass du mindestens %s alt bist, um Mastodon verwenden zu können. Das Alter wird nicht gespeichert.</string>
+	<string name="date_of_birth_explanation">Wir müssen sicherstellen, dass du mindestens %s alt bist, um Cupoftea.social verwenden zu können. Das Alter wird nicht gespeichert.</string>
 	<string name="open_link">Öffnen</string>
 	<string name="copy">Kopieren</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

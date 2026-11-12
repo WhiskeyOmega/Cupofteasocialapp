@@ -828,7 +828,7 @@
 	<string name="report_reason_legal_subtitle">Katsot sisällön rikkovan maasi tai palvelimen kotimaan lakeja</string>
 	<string name="date_of_birth">Syntymäpäivä</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Meidän on varmistettava, että olet vähintään %s, jotta voit käyttää Mastodonia. Emme tallenna tätä.</string>
+	<string name="date_of_birth_explanation">Meidän on varmistettava, että olet vähintään %s, jotta voit käyttää Cupoftea.socialia. Emme tallenna tätä.</string>
 	<string name="open_link">Avaa</string>
 	<string name="copy">Kopioi</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

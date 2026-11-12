@@ -828,7 +828,7 @@
 	<string name="report_reason_legal_subtitle">Դուք կարծում եք, որ սա խախտում է ձեր հանգույցի երկրի օրենքները</string>
 	<string name="date_of_birth">Ծննդյան ամսաթիվ</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Մաստոդոնն օգտագործելու համար մենք պետք է համոզվենք, որ դուք առնվազն %s տարեկան եք։ Սա գրանցումից հետո չի պահպանվի։</string>
+	<string name="date_of_birth_explanation">Cupoftea.social-ն օգտագործելու համար մենք պետք է համոզվենք, որ դուք առնվազն %s տարեկան եք։ Սա գրանցումից հետո չի պահպանվի։</string>
 	<string name="open_link">Բացել</string>
 	<string name="copy">Պատճենել</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

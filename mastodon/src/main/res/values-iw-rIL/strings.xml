@@ -821,7 +821,7 @@
 	<string name="report_reason_legal_subtitle">לדידך מתקיימת פה עבירה על חוקי מדינתך או מדינת השרת המארח</string>
 	<string name="date_of_birth">תאריך לידה</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">עלינו לוודא שגילך לפחות %s כדי להשתמש במסטודון. המידע לא ישמר אחרי ההרשמה.</string>
+	<string name="date_of_birth_explanation">עלינו לוודא שגילך לפחות %s כדי להשתמש ב-Cupoftea.social. המידע לא ישמר אחרי ההרשמה.</string>
 	<string name="open_link">פתיחה</string>
 	<string name="copy">העתקה</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

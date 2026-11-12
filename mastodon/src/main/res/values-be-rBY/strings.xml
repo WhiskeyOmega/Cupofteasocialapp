@@ -917,7 +917,7 @@
 	<string name="report_reason_legal_subtitle">Вы лічыце, што гэта парушае заканадаўства вашай краіны або краіны сервера</string>
 	<string name="date_of_birth">Дата нараджэння</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Мы мусім пераканацца, што вам не менш за %s гадоў, каб карыстацца Mastodon. Пасля рэгістрацыі гэта не будзе захавана.</string>
+	<string name="date_of_birth_explanation">Мы мусім пераканацца, што вам не менш за %s гадоў, каб карыстацца Cupoftea.social. Пасля рэгістрацыі гэта не будзе захавана.</string>
 	<string name="open_link">Адкрыць</string>
 	<string name="copy">Скапіраваць</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

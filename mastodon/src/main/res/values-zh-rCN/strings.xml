@@ -785,7 +785,7 @@
 	<string name="report_reason_legal_subtitle">你认为它违反了你或该实例所在国家的法律</string>
 	<string name="date_of_birth">出生日期</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">要使用 Mastodon，我们必须确保你至少已经 %s 岁。该信息在注册后不会保留。</string>
+	<string name="date_of_birth_explanation">要使用 Cupoftea.social，我们必须确保你至少已经 %s 岁。该信息在注册后不会保留。</string>
 	<string name="open_link">打开</string>
 	<string name="copy">复制</string>
 	<!-- Substituted into `date_of_birth_explanation` -->

@@ -829,7 +829,7 @@ Ne kadar çok kişiyi takip ederseniz, o kadar aktif ve ilginç olacaktır.</str
 	<string name="report_reason_legal_subtitle">Ülkenizdeki veya sunucunun bulunduğu ülkedeki yasaları ihlal ettiğini düşünüyorsunuz</string>
 	<string name="date_of_birth">Doğum tarihi</string>
 	<!-- %s is `at_least_x_years_old`. Some languages, unlike English, may require the word "years" here. -->
-	<string name="date_of_birth_explanation">Mastodon\'u kullanmak için için en az %s yaşında olduğunuzdan emin olmamız gerekiyor. Bu bilgi kaydolduktan sonra saklanmayacaktır.</string>
+	<string name="date_of_birth_explanation">Cupoftea.social\'ı kullanmak için için en az %s yaşında olduğunuzdan emin olmamız gerekiyor. Bu bilgi kaydolduktan sonra saklanmayacaktır.</string>
 	<string name="open_link">Aç</string>
 	<string name="copy">Kopyala</string>
 	<!-- Substituted into `date_of_birth_explanation` -->
